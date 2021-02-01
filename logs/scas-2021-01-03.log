@@ -1,0 +1,68 @@
+[2021-01-03 00:06:45.647] [INFO] SampleWebApp - ****************** SERVER STARTED ************************
+[2021-01-03 00:06:45.649] [INFO] SampleWebApp - ***************  http://localhost:4000  ******************
+[2021-01-03 00:06:45.854] [INFO] SampleWebApp - app started!
+[2021-01-03 00:12:54.221] [INFO] SampleWebApp - ****************** SERVER STARTED ************************
+[2021-01-03 00:12:54.222] [INFO] SampleWebApp - ***************  http://localhost:4000  ******************
+[2021-01-03 00:12:54.429] [INFO] SampleWebApp - app started!
+[2021-01-03 00:36:37.234] [INFO] SampleWebApp - ****************** SERVER STARTED ************************
+[2021-01-03 00:36:37.236] [INFO] SampleWebApp - ***************  http://localhost:4000  ******************
+[2021-01-03 00:36:37.427] [INFO] SampleWebApp - app started!
+[2021-01-03 00:44:42.749] [INFO] Helper - User admin_cc_gfe was not enrolled, so we will need an admin user object to register
+[2021-01-03 00:44:43.396] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-03 00:44:46.668] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-03 00:44:46.669] [INFO] Join-Channel - Calling peers in organization "Gfe" to join the channel
+[2021-01-03 00:44:47.342] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7053 softwarechannel
+[2021-01-03 00:44:47.421] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7058 softwarechannel
+[2021-01-03 00:44:47.423] [INFO] Join-Channel - Successfully joined peer to the channel softwarechannel
+[2021-01-03 00:44:47.423] [INFO] Join-Channel - Successfully joined peer to the channel softwarechannel
+[2021-01-03 00:44:47.431] [INFO] Join-Channel - Successfully joined peers in organization Gfe to the channel:softwarechannel
+[2021-01-03 01:06:23.886] [INFO] SampleWebApp - ****************** SERVER STARTED ************************
+[2021-01-03 01:06:23.887] [INFO] SampleWebApp - ***************  http://localhost:4000  ******************
+[2021-01-03 01:06:24.088] [INFO] SampleWebApp - app started!
+[2021-01-03 01:08:31.533] [INFO] Helper - User admin_cc_gfe was not enrolled, so we will need an admin user object to register
+[2021-01-03 01:08:32.158] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-03 01:08:35.420] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-03 01:08:35.421] [INFO] Join-Channel - Calling peers in organization "Gfe" to join the channel
+[2021-01-03 01:08:36.218] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7053 softwarechannel
+[2021-01-03 01:08:36.237] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7058 softwarechannel
+[2021-01-03 01:08:36.237] [INFO] Join-Channel - Successfully joined peer to the channel softwarechannel
+[2021-01-03 01:08:36.237] [INFO] Join-Channel - Successfully joined peer to the channel softwarechannel
+[2021-01-03 01:08:36.243] [INFO] Join-Channel - Successfully joined peers in organization Gfe to the channel:softwarechannel
+[2021-01-03 01:20:39.472] [INFO] SampleWebApp - ****************** SERVER STARTED ************************
+[2021-01-03 01:20:39.474] [INFO] SampleWebApp - ***************  http://localhost:4000  ******************
+[2021-01-03 01:20:39.693] [INFO] SampleWebApp - app started!
+[2021-01-03 12:35:38.883] [INFO] SampleWebApp - ****************** SERVER STARTED ************************
+[2021-01-03 12:35:38.884] [INFO] SampleWebApp - ***************  http://localhost:4000  ******************
+[2021-01-03 12:35:39.080] [INFO] SampleWebApp - app started!
+[2021-01-03 12:41:00.624] [INFO] SampleWebApp - ****************** SERVER STARTED ************************
+[2021-01-03 12:41:00.626] [INFO] SampleWebApp - ***************  http://localhost:4000  ******************
+[2021-01-03 12:41:00.801] [INFO] SampleWebApp - app started!
+[2021-01-03 13:12:56.179] [INFO] Helper - User admin_cc_gfe was not enrolled, so we will need an admin user object to register
+[2021-01-03 13:12:56.849] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-03 13:12:56.899] [ERROR] Create-Channel - 
+!!!!!!!!! Failed to create the channel 'softwarechannel' !!!!!!!!!
+
+
+[2021-01-03 13:12:56.900] [ERROR] Create-Channel - Error: Failed to create the channel 'softwarechannel'
+    at Object.createChannel (/Users/lihaoran/Desktop/project/IdeaProjects/demonacos/fabric-nodejs/app/create-channel.js:61:10)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+[2021-01-03 13:16:59.873] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-03 13:16:59.874] [INFO] Join-Channel - Calling peers in organization "Gfe" to join the channel
+[2021-01-03 13:17:00.418] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7058 softwarechannel
+[2021-01-03 13:17:06.537] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7058 softwarechannel
+[2021-01-03 13:17:06.659] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7058 softwarechannel
+[2021-01-03 13:17:59.949] [ERROR] Join-Channel - REQUEST_TIMEOUT:localhost:7053
+[2021-01-03 13:17:59.950] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-03 13:17:59.954] [ERROR] Join-Channel - Error: Problem setting up the event hub :Error: EventHub has been shutdown
+    at eh.registerBlockEvent (/Users/lihaoran/Desktop/project/IdeaProjects/demonacos/fabric-nodejs/app/join-channel.js:85:13)
+    at closer (/Users/lihaoran/Desktop/project/IdeaProjects/demonacos/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:441:5)
+    at EventHub._closeAllCallbacks (/Users/lihaoran/Desktop/project/IdeaProjects/demonacos/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:446:3)
+    at EventHub._disconnect (/Users/lihaoran/Desktop/project/IdeaProjects/demonacos/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:387:8)
+    at EventHub.disconnect (/Users/lihaoran/Desktop/project/IdeaProjects/demonacos/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:376:8)
+    at Timeout.setTimeout (/Users/lihaoran/Desktop/project/IdeaProjects/demonacos/fabric-nodejs/app/join-channel.js:60:9)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)
+[2021-01-03 13:17:59.955] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-03 13:17:59.960] [ERROR] Join-Channel - Failed to join all peers to channel. cause:Error: Problem setting up the event hub :Error: EventHub has been shutdown

@@ -1,0 +1,83 @@
+{
+   "host":"localhost",
+   "port":"4000",
+   "jwt_expiretime": "15552000",
+   "channels":[
+     {"name":"softwarechannel"},
+     {"name":"registerchannel"},
+     {"name":"monitorchannel"}
+   ],
+   "softwarechannel": {
+     "configPath":"../artifacts/channel/softwarechannel.tx",
+     "orgs": {
+       "Gfe":[
+         {"peer":"peer0.fabric.gfe.com"},
+         {"peer":"peer1.fabric.gfe.com"}
+       ],
+       "Deke":[
+         {"peer":"peer0.fabric.deke.com"},
+         {"peer":"peer1.fabric.deke.com"}
+       ]
+     }
+   },
+   "registerchannel": {
+     "configPath":"../artifacts/channel/registerchannel.tx",
+     "orgs": {
+       "Gfe":[
+         {"peer":"peer0.fabric.gfe.com"},
+         {"peer":"peer1.fabric.gfe.com"},
+         {"peer":"peer2.fabric.gfe.com"}
+       ],
+       "Deke":[
+         {"peer":"peer0.fabric.deke.com"},
+         {"peer":"peer1.fabric.deke.com"},
+         {"peer":"peer2.fabric.deke.com"}
+       ],
+       "Dbiir":[
+         {"peer":"peer0.fabric.dbiir.com"},
+         {"peer":"peer1.fabric.dbiir.com"},
+         {"peer":"peer2.fabric.dbiir.com"}
+       ],
+       "Ruc":[
+         {"peer":"peer0.fabric.ruc.com"},
+         {"peer":"peer1.fabric.ruc.com"},
+         {"peer":"peer2.fabric.ruc.com"}
+       ]
+     }
+   },
+   "monitorchannel": {
+     "configPath":"../artifacts/channel/monitorchannel.tx",
+     "orgs": {
+       "Gfe":[
+         {"peer":"peer0.fabric.gfe.com"},
+         {"peer":"peer1.fabric.gfe.com"},
+         {"peer":"peer2.fabric.gfe.com"}
+       ],
+       "Deke":[
+         {"peer":"peer0.fabric.deke.com"},
+         {"peer":"peer1.fabric.deke.com"},
+         {"peer":"peer2.fabric.deke.com"}
+       ],
+       "Dbiir":[
+         {"peer":"peer0.fabric.dbiir.com"},
+         {"peer":"peer1.fabric.dbiir.com"},
+         {"peer":"peer2.fabric.dbiir.com"}
+       ],
+       "Ruc":[
+         {"peer":"peer0.fabric.ruc.com"},
+         {"peer":"peer1.fabric.ruc.com"},
+         {"peer":"peer2.fabric.ruc.com"}
+       ]
+     }
+   },
+   "CC_SRC_PATH":"../artifacts",
+   "chaincodeName":"task",
+   "eventWaitTime":"30000",
+   "admins":[
+      {
+         "username":"admin",
+         "secret":"adminpw",
+         "orgname":"Gfe"
+      }
+   ]
+}

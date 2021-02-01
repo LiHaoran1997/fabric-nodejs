@@ -1,0 +1,64 @@
+[2020-12-15 21:59:41.266] [INFO] SampleWebApp - ****************** SERVER STARTED ************************
+[2020-12-15 21:59:41.268] [INFO] SampleWebApp - ***************  http://localhost:4000  ******************
+[2020-12-15 21:59:41.471] [INFO] SampleWebApp - app started!
+[2020-12-15 21:59:50.984] [INFO] Helper - User admin_cc_gfe was not enrolled, so we will need an admin user object to register
+[2020-12-15 21:59:52.136] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2020-12-15 21:59:52.170] [ERROR] Create-Channel - 
+!!!!!!!!! Failed to create the channel 'softwarechannel' !!!!!!!!!
+
+
+[2020-12-15 21:59:52.170] [ERROR] Create-Channel - Error: Failed to create the channel 'softwarechannel'
+    at Object.createChannel (/Users/lihaoran/Desktop/project/IdeaProjects/demonacos/fabric-nodejs/app/create-channel.js:61:10)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+[2020-12-15 22:00:01.498] [INFO] Helper - Successfully loaded member from persistence
+[2020-12-15 22:00:01.540] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2020-12-15 22:00:01.587] [ERROR] Create-Channel - 
+!!!!!!!!! Failed to create the channel 'softwarechannel' !!!!!!!!!
+
+
+[2020-12-15 22:00:01.588] [ERROR] Create-Channel - Error: Failed to create the channel 'softwarechannel'
+    at Object.createChannel (/Users/lihaoran/Desktop/project/IdeaProjects/demonacos/fabric-nodejs/app/create-channel.js:61:10)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+[2020-12-15 22:00:07.985] [INFO] Helper - Successfully loaded member from persistence
+[2020-12-15 22:00:08.024] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2020-12-15 22:00:11.216] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2020-12-15 22:00:11.217] [INFO] Join-Channel - Calling peers in organization "Gfe" to join the channel
+[2020-12-15 22:00:11.963] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7058 softwarechannel
+[2020-12-15 22:00:12.033] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7053 softwarechannel
+[2020-12-15 22:00:12.037] [INFO] Join-Channel - Successfully joined peer to the channel softwarechannel
+[2020-12-15 22:00:12.037] [INFO] Join-Channel - Successfully joined peer to the channel softwarechannel
+[2020-12-15 22:00:12.044] [INFO] Join-Channel - Successfully joined peers in organization Gfe to the channel:softwarechannel
+[2020-12-15 22:21:38.395] [INFO] SampleWebApp - ****************** SERVER STARTED ************************
+[2020-12-15 22:21:38.397] [INFO] SampleWebApp - ***************  http://localhost:4000  ******************
+[2020-12-15 22:21:38.596] [INFO] SampleWebApp - app started!
+[2020-12-15 22:21:44.368] [INFO] Helper - User admin_cc_gfe was not enrolled, so we will need an admin user object to register
+[2020-12-15 22:21:45.907] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2020-12-15 22:21:45.943] [ERROR] Create-Channel - 
+!!!!!!!!! Failed to create the channel 'softwarechannel' !!!!!!!!!
+
+
+[2020-12-15 22:21:45.944] [ERROR] Create-Channel - Error: Failed to create the channel 'softwarechannel'
+    at Object.createChannel (/Users/lihaoran/Desktop/project/IdeaProjects/demonacos/fabric-nodejs/app/create-channel.js:61:10)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+[2020-12-15 22:21:54.929] [INFO] Helper - Successfully loaded member from persistence
+[2020-12-15 22:21:54.968] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2020-12-15 22:21:55.007] [ERROR] Create-Channel - 
+!!!!!!!!! Failed to create the channel 'softwarechannel' !!!!!!!!!
+
+
+[2020-12-15 22:21:55.007] [ERROR] Create-Channel - Error: Failed to create the channel 'softwarechannel'
+    at Object.createChannel (/Users/lihaoran/Desktop/project/IdeaProjects/demonacos/fabric-nodejs/app/create-channel.js:61:10)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+[2020-12-15 22:22:02.069] [INFO] Helper - Successfully loaded member from persistence
+[2020-12-15 22:22:02.108] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2020-12-15 22:22:05.381] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2020-12-15 22:22:05.382] [INFO] Join-Channel - Calling peers in organization "Gfe" to join the channel
+[2020-12-15 22:22:06.163] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7058 softwarechannel
+[2020-12-15 22:22:06.190] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7053 softwarechannel
+[2020-12-15 22:22:06.192] [INFO] Join-Channel - Successfully joined peer to the channel softwarechannel
+[2020-12-15 22:22:06.193] [INFO] Join-Channel - Successfully joined peer to the channel softwarechannel
+[2020-12-15 22:22:06.198] [INFO] Join-Channel - Successfully joined peers in organization Gfe to the channel:softwarechannel

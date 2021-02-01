@@ -1,0 +1,883 @@
+#
+# Copyright IBM Corp. All Rights Reserved.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+version: '2'
+
+services:
+
+  ca.fabric.gfe.com:
+    image: hyperledger/fabric-ca
+    environment:
+      - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
+      - FABRIC_CA_SERVER_CA_NAME=ca-gfe
+      - FABRIC_CA_SERVER_CA_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.fabric.gfe.com-cert.pem
+      - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/37278f63f10a72fd1e55ad2a178fb9b9a3c88aae02b3fa94f340f3f30f877e6a_sk
+      - FABRIC_CA_SERVER_TLS_ENABLED=true
+      - FABRIC_CA_SERVER_TLS_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.fabric.gfe.com-cert.pem
+      - FABRIC_CA_SERVER_TLS_KEYFILE=/etc/hyperledger/fabric-ca-server-config/37278f63f10a72fd1e55ad2a178fb9b9a3c88aae02b3fa94f340f3f30f877e6a_sk
+    ports:
+      - "7054:7054"
+    command: sh -c 'fabric-ca-server start -b admin:adminpw -d'
+    volumes:
+      - ./channel/crypto-config/peerOrganizations/fabric.gfe.com/ca/:/etc/hyperledger/fabric-ca-server-config
+    container_name: ca_gfe
+
+  ca.fabric.deke.com:
+    image: hyperledger/fabric-ca
+    environment:
+      - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
+      - FABRIC_CA_SERVER_CA_NAME=ca-deke
+      - FABRIC_CA_SERVER_CA_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.fabric.deke.com-cert.pem
+      - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/3bda50ddaede67cdeb7acb5d83966c7ea03f7ee69d388c295ac46f8775cae286_sk
+      - FABRIC_CA_SERVER_TLS_ENABLED=true
+      - FABRIC_CA_SERVER_TLS_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.fabric.deke.com-cert.pem
+      - FABRIC_CA_SERVER_TLS_KEYFILE=/etc/hyperledger/fabric-ca-server-config/3bda50ddaede67cdeb7acb5d83966c7ea03f7ee69d388c295ac46f8775cae286_sk
+    ports:
+      - "8054:7054"
+    command: sh -c 'fabric-ca-server start -b admin:adminpw -d'
+    volumes:
+      - ./channel/crypto-config/peerOrganizations/fabric.deke.com/ca/:/etc/hyperledger/fabric-ca-server-config
+    container_name: ca_deke
+
+  ca.fabric.dbiir.com:
+    image: hyperledger/fabric-ca
+    environment:
+      - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
+      - FABRIC_CA_SERVER_CA_NAME=ca-dbiir
+      - FABRIC_CA_SERVER_CA_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.fabric.dbiir.com-cert.pem
+      - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/0d18697a15a3b9d162f7302e49d7fb6747eb9912593e3eae7333ffdd40e25e79_sk
+      - FABRIC_CA_SERVER_TLS_ENABLED=true
+      - FABRIC_CA_SERVER_TLS_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.fabric.dbiir.com-cert.pem
+      - FABRIC_CA_SERVER_TLS_KEYFILE=/etc/hyperledger/fabric-ca-server-config/0d18697a15a3b9d162f7302e49d7fb6747eb9912593e3eae7333ffdd40e25e79_sk
+    ports:
+      - "9054:7054"
+    command: sh -c 'fabric-ca-server start -b admin:adminpw -d'
+    volumes:
+      - ./channel/crypto-config/peerOrganizations/fabric.dbiir.com/ca/:/etc/hyperledger/fabric-ca-server-config
+    container_name: ca_dbiir
+
+  ca.fabric.ruc.com:
+    image: hyperledger/fabric-ca
+    environment:
+      - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
+      - FABRIC_CA_SERVER_CA_NAME=ca-ruc
+      - FABRIC_CA_SERVER_CA_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.fabric.ruc.com-cert.pem
+      - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/a3cb09a3b464008067af50b390adaaa5ede2f9621267e839000dde269084338e_sk
+      - FABRIC_CA_SERVER_TLS_ENABLED=true
+      - FABRIC_CA_SERVER_TLS_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.fabric.ruc.com-cert.pem
+      - FABRIC_CA_SERVER_TLS_KEYFILE=/etc/hyperledger/fabric-ca-server-config/a3cb09a3b464008067af50b390adaaa5ede2f9621267e839000dde269084338e_sk
+    ports:
+      - "6054:7054"
+    command: sh -c 'fabric-ca-server start -b admin:adminpw -d'
+    volumes:
+      - ./channel/crypto-config/peerOrganizations/fabric.ruc.com/ca/:/etc/hyperledger/fabric-ca-server-config
+    container_name: ca_ruc
+
+  zookeeper0:
+    container_name: zookeeper0
+    extends:
+      file: base.yaml
+      service: zookeeper-base
+    environment:
+      - ZOO_MY_ID=1
+      - ZOO_SERVERS=server.1=zookeeper0:2888:3888 server.2=zookeeper1:2888:3888 server.3=zookeeper2:2888:3888
+
+  zookeeper1:
+    container_name: zookeeper1
+    extends:
+      file: base.yaml
+      service: zookeeper-base
+    environment:
+      - ZOO_MY_ID=2
+      - ZOO_SERVERS=server.1=zookeeper0:2888:3888 server.2=zookeeper1:2888:3888 server.3=zookeeper2:2888:3888
+
+  zookeeper2:
+    container_name: zookeeper2
+    extends:
+      file: base.yaml
+      service: zookeeper-base
+    environment:
+      - ZOO_MY_ID=3
+      - ZOO_SERVERS=server.1=zookeeper0:2888:3888 server.2=zookeeper1:2888:3888 server.3=zookeeper2:2888:3888
+
+  kafka0:
+    container_name: kafka0
+    extends:
+      file: base.yaml
+      service: kafka-base
+    environment:
+      - KAFKA_BROKER_ID=0
+      - KAFKA_MIN_INSYNC_REPLICAS=2
+      - KAFKA_DEFAULT_REPLICATION_FACTOR=3
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper0:2181,zookeeper1:2181,zookeeper2:2181
+    depends_on:
+      - zookeeper0
+      - zookeeper1
+      - zookeeper2
+
+  kafka1:
+    container_name: kafka1
+    extends:
+      file: base.yaml
+      service: kafka-base
+    environment:
+      - KAFKA_BROKER_ID=1
+      - KAFKA_MIN_INSYNC_REPLICAS=2
+      - KAFKA_DEFAULT_REPLICATION_FACTOR=3
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper0:2181,zookeeper1:2181,zookeeper2:2181
+    depends_on:
+      - zookeeper0
+      - zookeeper1
+      - zookeeper2
+
+  kafka2:
+    container_name: kafka2
+    extends:
+      file: base.yaml
+      service: kafka-base
+    environment:
+      - KAFKA_BROKER_ID=2
+      - KAFKA_MIN_INSYNC_REPLICAS=2
+      - KAFKA_DEFAULT_REPLICATION_FACTOR=3
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper0:2181,zookeeper1:2181,zookeeper2:2181
+    depends_on:
+      - zookeeper0
+      - zookeeper1
+      - zookeeper2
+
+  kafka3:
+    container_name: kafka3
+    extends:
+      file: base.yaml
+      service: kafka-base
+    environment:
+      - KAFKA_BROKER_ID=3
+      - KAFKA_MIN_INSYNC_REPLICAS=2
+      - KAFKA_DEFAULT_REPLICATION_FACTOR=3
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper0:2181,zookeeper1:2181,zookeeper2:2181
+    depends_on:
+      - zookeeper0
+      - zookeeper1
+      - zookeeper2
+
+  dbiir.orderer.com:
+    container_name: dbiir.orderer.com
+    extends:
+      file: base.yaml
+      service: orderer-base
+    ports:
+      - 7050:7050
+    volumes:
+        - ./channel:/etc/hyperledger/configtx
+        - ./channel/crypto-config/ordererOrganizations/orderer.com/orderers/dbiir.orderer.com/:/etc/hyperledger/crypto/orderer
+        - ./channel/crypto-config/peerOrganizations/fabric.gfe.com/peers/peer0.fabric.gfe.com/:/etc/hyperledger/crypto/gfe
+        - ./channel/crypto-config/peerOrganizations/fabric.deke.com/peers/peer0.fabric.deke.com/:/etc/hyperledger/crypto/deke
+        - ./channel/crypto-config/peerOrganizations/fabric.dbiir.com/peers/peer0.fabric.dbiir.com/:/etc/hyperledger/crypto/dbiir
+        - ./channel/crypto-config/peerOrganizations/fabric.ruc.com/peers/peer0.fabric.ruc.com/:/etc/hyperledger/crypto/ruc
+    depends_on:
+      - kafka0
+      - kafka1
+      - kafka2
+      - kafka3
+
+  deke.orderer.com:
+    container_name: deke.orderer.com
+    extends:
+      file: base.yaml
+      service: orderer-base
+    ports:
+      - 8050:7050
+    volumes:
+        - ./channel:/etc/hyperledger/configtx
+        - ./channel/crypto-config/ordererOrganizations/orderer.com/orderers/deke.orderer.com/:/etc/hyperledger/crypto/orderer
+        - ./channel/crypto-config/peerOrganizations/fabric.gfe.com/peers/peer0.fabric.gfe.com/:/etc/hyperledger/crypto/gfe
+        - ./channel/crypto-config/peerOrganizations/fabric.deke.com/peers/peer0.fabric.deke.com/:/etc/hyperledger/crypto/deke
+        - ./channel/crypto-config/peerOrganizations/fabric.dbiir.com/peers/peer0.fabric.dbiir.com/:/etc/hyperledger/crypto/dbiir
+        - ./channel/crypto-config/peerOrganizations/fabric.ruc.com/peers/peer0.fabric.ruc.com/:/etc/hyperledger/crypto/ruc
+    depends_on:
+      - kafka0
+      - kafka1
+      - kafka2
+      - kafka3
+
+  gfe.orderer.com:
+    container_name: gfe.orderer.com
+    extends:
+      file: base.yaml
+      service: orderer-base
+    ports:
+      - 9050:7050
+    volumes:
+        - ./channel:/etc/hyperledger/configtx
+        - ./channel/crypto-config/ordererOrganizations/orderer.com/orderers/gfe.orderer.com/:/etc/hyperledger/crypto/orderer
+        - ./channel/crypto-config/peerOrganizations/fabric.gfe.com/peers/peer0.fabric.gfe.com/:/etc/hyperledger/crypto/gfe
+        - ./channel/crypto-config/peerOrganizations/fabric.deke.com/peers/peer0.fabric.deke.com/:/etc/hyperledger/crypto/deke
+        - ./channel/crypto-config/peerOrganizations/fabric.dbiir.com/peers/peer0.fabric.dbiir.com/:/etc/hyperledger/crypto/dbiir
+        - ./channel/crypto-config/peerOrganizations/fabric.ruc.com/peers/peer0.fabric.ruc.com/:/etc/hyperledger/crypto/ruc
+    depends_on:
+      - kafka0
+      - kafka1
+      - kafka2
+      - kafka3
+
+  ruc.orderer.com:
+    container_name: ruc.orderer.com
+    extends:
+      file: base.yaml
+      service: orderer-base
+    ports:
+      - 6050:7050
+    volumes:
+        - ./channel:/etc/hyperledger/configtx
+        - ./channel/crypto-config/ordererOrganizations/orderer.com/orderers/ruc.orderer.com/:/etc/hyperledger/crypto/orderer
+        - ./channel/crypto-config/peerOrganizations/fabric.gfe.com/peers/peer0.fabric.gfe.com/:/etc/hyperledger/crypto/gfe
+        - ./channel/crypto-config/peerOrganizations/fabric.deke.com/peers/peer0.fabric.deke.com/:/etc/hyperledger/crypto/deke
+        - ./channel/crypto-config/peerOrganizations/fabric.dbiir.com/peers/peer0.fabric.dbiir.com/:/etc/hyperledger/crypto/dbiir
+        - ./channel/crypto-config/peerOrganizations/fabric.ruc.com/peers/peer0.fabric.ruc.com/:/etc/hyperledger/crypto/ruc
+    depends_on:
+      - kafka0
+      - kafka1
+      - kafka2
+      - kafka3
+
+  peer0.fabric.gfe.com:
+    container_name: peer0.fabric.gfe.com
+    extends:
+      file:   base.yaml
+      service: peer-base-nacos
+    environment:
+      - CORE_PEER_ID=peer0.fabric.gfe.com
+      - CORE_PEER_LOCALMSPID=GfeMSP
+      - CORE_PEER_ADDRESS=peer0.fabric.gfe.com:7051
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb0:5984
+      - CORE_PEER_MSP_KEYSTORE=/etc/hyperledger/crypto/admin/msp/keystore/bfcf0c59d4ccec10f52bdaea0eddfc7246a3964c368058453eaea813e27f3f28_sk
+      - CORE_PEER_MSP_ADMINCERTS=/etc/hyperledger/crypto/admin/msp/signcerts/Admin@fabric.gfe.com-cert.pem
+      - FABRIC_ORDERER_NAME=gfe.orderer.com
+      - FABRIC_ORDERER_ADDR=grpcs://10.77.70.174:9050
+      - ORDERER_TLS_PATH=/etc/hyperledger/crypto/orderer/tls/ca.crt
+      - DB_URL=jdbc:mysql://10.77.70.176:3306/nacos_config?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true
+      - DB_USER=root
+      - DB_PASSWORD=1234qwer
+      - FABRIC_USERNAME=admin_cc_gfe
+      - NACOS_ADDRESS=10.77.70.174
+      - NACOS_PORT=8848
+    ports:
+      - 7051:7051
+      - 7053:7053
+      - 8848:8848
+    volumes:
+        - ./bin/peer-n:/nacos/distribution/target/nacos-server-1.2.0-SNAPSHOT/nacos/bin
+        - ./conf:/nacos/distribution/target/nacos-server-1.2.0-SNAPSHOT/nacos/conf
+        - ./channel/crypto-config/peerOrganizations/fabric.gfe.com/users/Admin@fabric.gfe.com/:/etc/hyperledger/crypto/admin
+        - ./channel/crypto-config/ordererOrganizations/orderer.com/orderers/gfe.orderer.com/:/etc/hyperledger/crypto/orderer        
+        - ./channel/crypto-config/peerOrganizations/fabric.gfe.com/peers/peer0.fabric.gfe.com/:/etc/hyperledger/crypto/peer
+    depends_on:
+      #- dbiir.orderer.com
+      #- deke.orderer.com
+      - gfe.orderer.com
+      - couchdb0
+
+
+  peer1.fabric.gfe.com:
+    container_name: peer1.fabric.gfe.com
+    extends:
+      file:   base.yaml
+      service: peer-base-nacos
+    environment:
+      - CORE_PEER_ID=peer1.fabric.gfe.com
+      - CORE_PEER_LOCALMSPID=GfeMSP
+      - CORE_PEER_ADDRESS=peer1.fabric.gfe.com:7051
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb1:5984
+      - CORE_PEER_MSP_KEYSTORE=/etc/hyperledger/crypto/admin/msp/keystore/bfcf0c59d4ccec10f52bdaea0eddfc7246a3964c368058453eaea813e27f3f28_sk
+      - CORE_PEER_MSP_ADMINCERTS=/etc/hyperledger/crypto/admin/msp/signcerts/Admin@fabric.gfe.com-cert.pem
+      - FABRIC_ORDERER_NAME=gfe.orderer.com
+      - FABRIC_ORDERER_ADDR=grpcs://10.77.70.174:9050
+      - ORDERER_TLS_PATH=/etc/hyperledger/crypto/orderer/tls/ca.crt
+      - DB_URL=jdbc:mysql://10.77.70.176:3306/nacos_config?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true
+      - DB_USER=root
+      - DB_PASSWORD=1234qwer
+      - FABRIC_USERNAME=admin_cc_gfe
+      - NACOS_ADDRESS=10.77.70.174
+      - NACOS_PORT=8849
+    ports:
+      - 7056:7051
+      - 7058:7053
+      - 8849:8849
+    volumes:
+        - ./bin/peer-n:/nacos/distribution/target/nacos-server-1.2.0-SNAPSHOT/nacos/bin
+        - ./conf:/nacos/distribution/target/nacos-server-1.2.0-SNAPSHOT/nacos/conf
+        - ./channel/crypto-config/peerOrganizations/fabric.gfe.com/users/Admin@fabric.gfe.com/:/etc/hyperledger/crypto/admin
+        - ./channel/crypto-config/ordererOrganizations/orderer.com/orderers/gfe.orderer.com/:/etc/hyperledger/crypto/orderer        
+        - ./channel/crypto-config/peerOrganizations/fabric.gfe.com/peers/peer1.fabric.gfe.com/:/etc/hyperledger/crypto/peer
+    depends_on:
+      #- dbiir.orderer.com
+      #- deke.orderer.com
+      - gfe.orderer.com
+      - couchdb1
+
+  peer2.fabric.gfe.com:
+    container_name: peer2.fabric.gfe.com
+    extends:
+      file:   base.yaml
+      service: peer-base-nacos
+    environment:
+      - CORE_PEER_ID=peer2.fabric.gfe.com
+      - CORE_PEER_LOCALMSPID=GfeMSP
+      - CORE_PEER_ADDRESS=peer2.fabric.gfe.com:7051
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb2:5984
+      - CORE_PEER_MSP_KEYSTORE=/etc/hyperledger/crypto/admin/msp/keystore/bfcf0c59d4ccec10f52bdaea0eddfc7246a3964c368058453eaea813e27f3f28_sk
+      - CORE_PEER_MSP_ADMINCERTS=/etc/hyperledger/crypto/admin/msp/signcerts/Admin@fabric.gfe.com-cert.pem
+      - FABRIC_ORDERER_NAME=gfe.orderer.com
+      - FABRIC_ORDERER_ADDR=grpcs://10.77.70.174:9050
+      - ORDERER_TLS_PATH=/etc/hyperledger/crypto/orderer/tls/ca.crt
+      - DB_URL=jdbc:mysql://10.77.70.176:3306/nacos_config?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true
+      - DB_USER=root
+      - DB_PASSWORD=1234qwer
+      - FABRIC_USERNAME=admin_cc_gfe
+      - NACOS_ADDRESS=10.77.70.174
+      - NACOS_PORT=8850
+    ports:
+      - 7061:7051
+      - 7063:7053
+      - 8850:8850
+    volumes:
+        - ./bin/peer-n:/nacos/distribution/target/nacos-server-1.2.0-SNAPSHOT/nacos/bin
+        - ./conf:/nacos/distribution/target/nacos-server-1.2.0-SNAPSHOT/nacos/conf
+        - ./channel/crypto-config/peerOrganizations/fabric.gfe.com/users/Admin@fabric.gfe.com/:/etc/hyperledger/crypto/admin
+        - ./channel/crypto-config/ordererOrganizations/orderer.com/orderers/gfe.orderer.com/:/etc/hyperledger/crypto/orderer        
+        - ./channel/crypto-config/peerOrganizations/fabric.gfe.com/peers/peer2.fabric.gfe.com/:/etc/hyperledger/crypto/peer
+
+    depends_on:
+      #- dbiir.orderer.com
+      #- deke.orderer.com
+      - gfe.orderer.com
+      - couchdb2
+
+  peer0.fabric.deke.com:
+    container_name: peer0.fabric.deke.com
+    extends:
+      file:   base.yaml
+      service: peer-base-nacos
+    environment:
+      - CORE_PEER_ID=peer0.fabric.deke.com
+      - CORE_PEER_LOCALMSPID=DekeMSP
+      - CORE_PEER_ADDRESS=peer0.fabric.deke.com:7051
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb3:5984
+      - CORE_PEER_MSP_KEYSTORE=/etc/hyperledger/crypto/admin/msp/keystore/09f5b23dded6e6774bfc0f99ba05ac1e0798edecf5732c2466f3331d81f7a4d1_sk
+      - CORE_PEER_MSP_ADMINCERTS=/etc/hyperledger/crypto/admin/msp/signcerts/Admin@fabric.deke.com-cert.pem
+      - FABRIC_ORDERER_NAME=deke.orderer.com
+      - FABRIC_ORDERER_ADDR=grpcs://10.77.70.174:8050
+      - ORDERER_TLS_PATH=/etc/hyperledger/crypto/orderer/tls/ca.crt
+      - DB_URL=jdbc:mysql://10.77.70.176:3306/nacos_config?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true
+      - DB_USER=root
+      - DB_PASSWORD=1234qwer
+      - FABRIC_USERNAME=admin_cc_deke
+      - NACOS_ADDRESS=10.77.70.174
+      - NACOS_PORT=8851
+    ports:
+      - 8051:7051
+      - 8053:7053
+      - 8851:8851
+    volumes:
+        - ./bin/peer-n:/nacos/distribution/target/nacos-server-1.2.0-SNAPSHOT/nacos/bin
+        - ./conf:/nacos/distribution/target/nacos-server-1.2.0-SNAPSHOT/nacos/conf
+        - ./channel/crypto-config/peerOrganizations/fabric.deke.com/users/Admin@fabric.deke.com/:/etc/hyperledger/crypto/admin
+        - ./channel/crypto-config/ordererOrganizations/orderer.com/orderers/deke.orderer.com/:/etc/hyperledger/crypto/orderer  
+        - ./channel/crypto-config/peerOrganizations/fabric.deke.com/peers/peer0.fabric.deke.com/:/etc/hyperledger/crypto/peer
+    depends_on:
+      #- dbiir.orderer.com
+      - deke.orderer.com
+      #- gfe.orderer.com
+      - couchdb3
+
+  peer1.fabric.deke.com:
+    container_name: peer1.fabric.deke.com
+    extends:
+      file:   base.yaml
+      service: peer-base-gmn
+    environment:
+      - CORE_PEER_ID=peer1.fabric.deke.com
+      - CORE_PEER_LOCALMSPID=DekeMSP
+      - CORE_PEER_ADDRESS=peer1.fabric.deke.com:7051
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb4:5984
+      - CORE_PEER_MSP_KEYSTORE=/etc/hyperledger/crypto/admin/msp/keystore/09f5b23dded6e6774bfc0f99ba05ac1e0798edecf5732c2466f3331d81f7a4d1_sk
+      - CORE_PEER_MSP_ADMINCERTS=/etc/hyperledger/crypto/admin/msp/signcerts/Admin@fabric.deke.com-cert.pem
+      - FABRIC_ORDERER_NAME=deke.orderer.com
+      - FABRIC_ORDERER_ADDR=grpcs://10.77.70.174:8050
+      - ORDERER_TLS_PATH=/etc/hyperledger/crypto/orderer/tls/ca.crt
+      - DB_URL=jdbc:mysql://10.77.70.174:3306/new_test?useSSL=false&autoReconnect=true&failOverReadOnly=false
+      - DB_USER=root
+      - DB_PASSWORD=1234qwer
+      - FABRIC_USERNAME=admin_cc_deke
+      - NACOS_PEER_LOCALMSPID=GfeMSP
+      - NACOS_PEER_ID=peer0.fabric.gfe.com
+      - NACOS_PEER_ADDRESS=peer0.fabric.gfe.com:7051
+      - NACOS_PEER_MSP_KEYSTORE=/etc/hyperledger/crypto/user1/msp/keystore/407663b62f20ea0ae09f5e90941ab7ee3d0630f1a3aa5e05a78aedbb16f9736b_sk
+      - NACOS_PEER_MSP_ADMINCERTS=/etc/hyperledger/crypto/user1/msp/signcerts/User1@fabric.gfe.com-cert.pem
+      - FABRIC_NACOS_ORDERER_NAME=gfe.orderer.com
+      - FABRIC_NACOS_ORDERER_ADDR=grpcs://10.77.70.174:9050
+      - NACOS_ORDERER_TLS_PATH=/etc/hyperledger/crypto/register/orderer/tls/ca.crt
+      - FABRIC_NACOS_USERNAME=admin_cc_gfe
+    ports:
+      - 8056:7051
+      - 8058:7053
+      - 9001:8999
+    volumes:
+        - ./channel/crypto-config/peerOrganizations/fabric.deke.com/users/Admin@fabric.deke.com/:/etc/hyperledger/crypto/admin
+        - ./channel/crypto-config/ordererOrganizations/orderer.com/orderers/deke.orderer.com/:/etc/hyperledger/crypto/orderer   
+        - ./channel/crypto-config/peerOrganizations/fabric.deke.com/peers/peer1.fabric.deke.com/:/etc/hyperledger/crypto/peer
+        - ./channel/crypto-config/peerOrganizations/fabric.gfe.com/peers/peer0.fabric.gfe.com/:/etc/hyperledger/crypto/register/peer
+        - ./channel/crypto-config/peerOrganizations/fabric.gfe.com/users/User1@fabric.gfe.com/:/etc/hyperledger/crypto/user1
+        - ./channel/crypto-config/ordererOrganizations/orderer.com/orderers/gfe.orderer.com/:/etc/hyperledger/crypto/register/orderer   
+    depends_on:
+      - peer0.fabric.gfe.com
+      - deke.orderer.com
+      - gfe.orderer.com
+      - couchdb4
+
+  peer2.fabric.deke.com:
+    container_name: peer2.fabric.deke.com
+    extends:
+      file:   base.yaml
+      service: peer-base-gmn
+    environment:
+      - CORE_PEER_ID=peer2.fabric.deke.com
+      - CORE_PEER_LOCALMSPID=DekeMSP
+      - CORE_PEER_ADDRESS=peer2.fabric.deke.com:7051
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb5:5984
+      - CORE_PEER_MSP_KEYSTORE=/etc/hyperledger/crypto/admin/msp/keystore/09f5b23dded6e6774bfc0f99ba05ac1e0798edecf5732c2466f3331d81f7a4d1_sk
+      - CORE_PEER_MSP_ADMINCERTS=/etc/hyperledger/crypto/admin/msp/signcerts/Admin@fabric.deke.com-cert.pem
+      - FABRIC_ORDERER_NAME=deke.orderer.com
+      - FABRIC_ORDERER_ADDR=grpcs://10.77.70.174:8050
+      - ORDERER_TLS_PATH=/etc/hyperledger/crypto/orderer/tls/ca.crt
+      - DB_URL=jdbc:mysql://10.77.70.174:3306/new_test?useSSL=false&autoReconnect=true&failOverReadOnly=false
+      - DB_USER=root
+      - DB_PASSWORD=1234qwer
+      - FABRIC_USERNAME=admin_cc_deke
+      - NACOS_PEER_LOCALMSPID=GfeMSP
+      - NACOS_PEER_ID=peer0.fabric.gfe.com
+      - NACOS_PEER_ADDRESS=peer0.fabric.gfe.com:7051
+      - NACOS_PEER_MSP_KEYSTORE=/etc/hyperledger/crypto/user1/msp/keystore/407663b62f20ea0ae09f5e90941ab7ee3d0630f1a3aa5e05a78aedbb16f9736b_sk
+      - NACOS_PEER_MSP_ADMINCERTS=/etc/hyperledger/crypto/user1/msp/signcerts/User1@fabric.gfe.com-cert.pem
+      - FABRIC_NACOS_ORDERER_NAME=gfe.orderer.com
+      - FABRIC_NACOS_ORDERER_ADDR=grpcs://10.77.70.174:9050
+      - NACOS_ORDERER_TLS_PATH=/etc/hyperledger/crypto/register/orderer/tls/ca.crt
+      - FABRIC_NACOS_USERNAME=admin_cc_gfe
+    ports:
+      - 8061:7051
+      - 8063:7053
+      - 9002:8999
+    volumes:
+        - ./channel/crypto-config/peerOrganizations/fabric.deke.com/users/Admin@fabric.deke.com/:/etc/hyperledger/crypto/admin
+        - ./channel/crypto-config/ordererOrganizations/orderer.com/orderers/deke.orderer.com/:/etc/hyperledger/crypto/orderer   
+        - ./channel/crypto-config/peerOrganizations/fabric.deke.com/peers/peer2.fabric.deke.com/:/etc/hyperledger/crypto/peer
+        - ./channel/crypto-config/peerOrganizations/fabric.gfe.com/peers/peer0.fabric.gfe.com/:/etc/hyperledger/crypto/register/peer
+        - ./channel/crypto-config/peerOrganizations/fabric.gfe.com/users/User1@fabric.gfe.com/:/etc/hyperledger/crypto/user1
+        - ./channel/crypto-config/ordererOrganizations/orderer.com/orderers/gfe.orderer.com/:/etc/hyperledger/crypto/register/orderer  
+    depends_on:
+      - peer0.fabric.gfe.com
+      - deke.orderer.com
+      - gfe.orderer.com
+      - couchdb5
+
+  peer0.fabric.dbiir.com:
+    container_name: peer0.fabric.dbiir.com
+    extends:
+      file:   base.yaml
+      service: peer-base-gmn
+    environment:
+      - CORE_PEER_ID=peer0.fabric.dbiir.com
+      - CORE_PEER_LOCALMSPID=DbiirMSP
+      - CORE_PEER_ADDRESS=peer0.fabric.dbiir.com:7051
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb6:5984
+      - CORE_PEER_MSP_KEYSTORE=/etc/hyperledger/crypto/admin/msp/keystore/a209bf48d9dfebbf621ad94f2c04803bfbe21256e0d055449267cbb50e743a35_sk
+      - CORE_PEER_MSP_ADMINCERTS=/etc/hyperledger/crypto/admin/msp/signcerts/Admin@fabric.dbiir.com-cert.pem
+      - FABRIC_ORDERER_NAME=dbiir.orderer.com
+      - FABRIC_ORDERER_ADDR=grpcs://10.77.70.174:7050
+      - ORDERER_TLS_PATH=/etc/hyperledger/crypto/orderer/tls/ca.crt
+      - DB_URL=jdbc:mysql://10.77.70.174:3306/new_test?useSSL=false&autoReconnect=true&failOverReadOnly=false
+      - DB_USER=root
+      - DB_PASSWORD=1234qwer
+      - FABRIC_USERNAME=admin_cc_dbiir
+      - NACOS_PEER_LOCALMSPID=GfeMSP
+      - NACOS_PEER_ID=peer0.fabric.gfe.com
+      - NACOS_PEER_ADDRESS=peer0.fabric.gfe.com:7051
+      - NACOS_PEER_MSP_KEYSTORE=/etc/hyperledger/crypto/user1/msp/keystore/407663b62f20ea0ae09f5e90941ab7ee3d0630f1a3aa5e05a78aedbb16f9736b_sk
+      - NACOS_PEER_MSP_ADMINCERTS=/etc/hyperledger/crypto/user1/msp/signcerts/User1@fabric.gfe.com-cert.pem
+      - FABRIC_NACOS_ORDERER_NAME=gfe.orderer.com
+      - FABRIC_NACOS_ORDERER_ADDR=grpcs://10.77.70.174:9050
+      - NACOS_ORDERER_TLS_PATH=/etc/hyperledger/crypto/register/orderer/tls/ca.crt
+      - FABRIC_NACOS_USERNAME=admin_cc_gfe
+    ports:
+      - 9051:7051
+      - 9053:7053
+      - 9003:8999
+    volumes:
+        - ./channel/crypto-config/peerOrganizations/fabric.dbiir.com/users/Admin@fabric.dbiir.com/:/etc/hyperledger/crypto/admin
+        - ./channel/crypto-config/ordererOrganizations/orderer.com/orderers/dbiir.orderer.com/:/etc/hyperledger/crypto/orderer   
+        - ./channel/crypto-config/peerOrganizations/fabric.dbiir.com/peers/peer0.fabric.dbiir.com/:/etc/hyperledger/crypto/peer
+        - ./channel/crypto-config/peerOrganizations/fabric.gfe.com/peers/peer0.fabric.gfe.com/:/etc/hyperledger/crypto/register/peer
+        - ./channel/crypto-config/peerOrganizations/fabric.gfe.com/users/User1@fabric.gfe.com/:/etc/hyperledger/crypto/user1
+        - ./channel/crypto-config/ordererOrganizations/orderer.com/orderers/gfe.orderer.com/:/etc/hyperledger/crypto/register/orderer  
+    depends_on:
+      - peer0.fabric.gfe.com
+      - dbiir.orderer.com
+      - gfe.orderer.com
+      - couchdb6
+
+  peer1.fabric.dbiir.com:
+    container_name: peer1.fabric.dbiir.com
+    extends:
+      file:   base.yaml
+      service: peer-base-gmn
+    environment:
+      - CORE_PEER_ID=peer1.fabric.dbiir.com
+      - CORE_PEER_LOCALMSPID=DbiirMSP
+      - CORE_PEER_ADDRESS=peer1.fabric.dbiir.com:7051
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb7:5984
+      - CORE_PEER_MSP_KEYSTORE=/etc/hyperledger/crypto/admin/msp/keystore/a209bf48d9dfebbf621ad94f2c04803bfbe21256e0d055449267cbb50e743a35_sk
+      - CORE_PEER_MSP_ADMINCERTS=/etc/hyperledger/crypto/admin/msp/signcerts/Admin@fabric.dbiir.com-cert.pem
+      - FABRIC_ORDERER_NAME=dbiir.orderer.com
+      - FABRIC_ORDERER_ADDR=grpcs://10.77.70.174:7050
+      - ORDERER_TLS_PATH=/etc/hyperledger/crypto/orderer/tls/ca.crt
+      - DB_URL=jdbc:mysql://10.77.70.174:3306/new_test?useSSL=false&autoReconnect=true&failOverReadOnly=false
+      - DB_USER=root
+      - DB_PASSWORD=1234qwer
+      - FABRIC_USERNAME=admin_cc_dbiir
+      - NACOS_PEER_LOCALMSPID=GfeMSP
+      - NACOS_PEER_ID=peer0.fabric.gfe.com
+      - NACOS_PEER_ADDRESS=peer0.fabric.gfe.com:7051
+      - NACOS_PEER_MSP_KEYSTORE=/etc/hyperledger/crypto/user1/msp/keystore/407663b62f20ea0ae09f5e90941ab7ee3d0630f1a3aa5e05a78aedbb16f9736b_sk
+      - NACOS_PEER_MSP_ADMINCERTS=/etc/hyperledger/crypto/user1/msp/signcerts/User1@fabric.gfe.com-cert.pem
+      - FABRIC_NACOS_ORDERER_NAME=gfe.orderer.com
+      - FABRIC_NACOS_ORDERER_ADDR=grpcs://10.77.70.174:9050
+      - NACOS_ORDERER_TLS_PATH=/etc/hyperledger/crypto/register/orderer/tls/ca.crt
+      - FABRIC_NACOS_USERNAME=admin_cc_gfe
+    ports:
+      - 9056:7051
+      - 9058:7053
+      - 9004:8999
+    volumes:
+        - ./channel/crypto-config/peerOrganizations/fabric.dbiir.com/users/Admin@fabric.dbiir.com/:/etc/hyperledger/crypto/admin
+        - ./channel/crypto-config/ordererOrganizations/orderer.com/orderers/dbiir.orderer.com/:/etc/hyperledger/crypto/orderer   
+        - ./channel/crypto-config/peerOrganizations/fabric.dbiir.com/peers/peer1.fabric.dbiir.com/:/etc/hyperledger/crypto/peer
+        - ./channel/crypto-config/peerOrganizations/fabric.gfe.com/peers/peer0.fabric.gfe.com/:/etc/hyperledger/crypto/register/peer
+        - ./channel/crypto-config/peerOrganizations/fabric.gfe.com/users/User1@fabric.gfe.com/:/etc/hyperledger/crypto/user1
+        - ./channel/crypto-config/ordererOrganizations/orderer.com/orderers/gfe.orderer.com/:/etc/hyperledger/crypto/register/orderer  
+    depends_on:
+      - dbiir.orderer.com
+      - peer0.fabric.gfe.com
+      - gfe.orderer.com
+      - couchdb7
+
+  peer2.fabric.dbiir.com:
+    container_name: peer2.fabric.dbiir.com
+    extends:
+      file:   base.yaml
+      service: peer-base-gmn
+    environment:
+      - CORE_PEER_ID=peer2.fabric.dbiir.com
+      - CORE_PEER_LOCALMSPID=DbiirMSP
+      - CORE_PEER_ADDRESS=peer2.fabric.dbiir.com:7051
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb8:5984
+      - CORE_PEER_MSP_KEYSTORE=/etc/hyperledger/crypto/admin/msp/keystore/a209bf48d9dfebbf621ad94f2c04803bfbe21256e0d055449267cbb50e743a35_sk
+      - CORE_PEER_MSP_ADMINCERTS=/etc/hyperledger/crypto/admin/msp/signcerts/Admin@fabric.dbiir.com-cert.pem
+      - FABRIC_ORDERER_NAME=dbiir.orderer.com
+      - FABRIC_ORDERER_ADDR=grpcs://10.77.70.174:7050
+      - ORDERER_TLS_PATH=/etc/hyperledger/crypto/orderer/tls/ca.crt
+      - DB_URL=jdbc:mysql://10.77.70.174:3306/new_test?useSSL=false&autoReconnect=true&failOverReadOnly=false
+      - DB_USER=root
+      - DB_PASSWORD=1234qwer
+      - FABRIC_USERNAME=admin_cc_dbiir
+      - NACOS_PEER_LOCALMSPID=GfeMSP
+      - NACOS_PEER_ID=peer0.fabric.gfe.com
+      - NACOS_PEER_ADDRESS=peer0.fabric.gfe.com:7051
+      - NACOS_PEER_MSP_KEYSTORE=/etc/hyperledger/crypto/user1/msp/keystore/407663b62f20ea0ae09f5e90941ab7ee3d0630f1a3aa5e05a78aedbb16f9736b_sk
+      - NACOS_PEER_MSP_ADMINCERTS=/etc/hyperledger/crypto/user1/msp/signcerts/User1@fabric.gfe.com-cert.pem
+      - FABRIC_NACOS_ORDERER_NAME=gfe.orderer.com
+      - FABRIC_NACOS_ORDERER_ADDR=grpcs://10.77.70.174:9050
+      - NACOS_ORDERER_TLS_PATH=/etc/hyperledger/crypto/register/orderer/tls/ca.crt
+      - FABRIC_NACOS_USERNAME=admin_cc_gfe
+    ports:
+      - 9061:7051
+      - 9063:7053
+      - 9005:8999
+    volumes:
+        - ./channel/crypto-config/peerOrganizations/fabric.dbiir.com/users/Admin@fabric.dbiir.com/:/etc/hyperledger/crypto/admin
+        - ./channel/crypto-config/ordererOrganizations/orderer.com/orderers/dbiir.orderer.com/:/etc/hyperledger/crypto/orderer   
+        - ./channel/crypto-config/peerOrganizations/fabric.dbiir.com/peers/peer2.fabric.dbiir.com/:/etc/hyperledger/crypto/peer
+        - ./channel/crypto-config/peerOrganizations/fabric.gfe.com/peers/peer0.fabric.gfe.com/:/etc/hyperledger/crypto/register/peer
+        - ./channel/crypto-config/peerOrganizations/fabric.gfe.com/users/User1@fabric.gfe.com/:/etc/hyperledger/crypto/user1
+        - ./channel/crypto-config/ordererOrganizations/orderer.com/orderers/gfe.orderer.com/:/etc/hyperledger/crypto/register/orderer  
+    depends_on:
+      - dbiir.orderer.com
+      - peer0.fabric.gfe.com
+      - gfe.orderer.com
+      - couchdb8
+  peer0.fabric.ruc.com:
+    container_name: peer0.fabric.ruc.com
+    extends:
+      file:   base.yaml
+      service: peer-base-gmn
+    environment:
+      - CORE_PEER_ID=peer0.fabric.ruc.com
+      - CORE_PEER_LOCALMSPID=RucMSP
+      - CORE_PEER_ADDRESS=peer0.fabric.ruc.com:7051
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb9:5984
+      - CORE_PEER_MSP_KEYSTORE=/etc/hyperledger/crypto/admin/msp/keystore/e0e6b9c15c87355a7b619880fc6eb6fa0827974f109f5d5d548def67849c0479_sk
+      - CORE_PEER_MSP_ADMINCERTS=/etc/hyperledger/crypto/admin/msp/signcerts/Admin@fabric.ruc.com-cert.pem
+      - FABRIC_ORDERER_NAME=ruc.orderer.com
+      - FABRIC_ORDERER_ADDR=grpcs://10.77.70.174:6050
+      - ORDERER_TLS_PATH=/etc/hyperledger/crypto/orderer/tls/ca.crt
+      - DB_URL=jdbc:mysql://10.77.70.174:3306/new_test?useSSL=false&autoReconnect=true&failOverReadOnly=false
+      - DB_USER=root
+      - DB_PASSWORD=1234qwer
+      - FABRIC_USERNAME=admin_cc_ruc
+      - NACOS_PEER_LOCALMSPID=GfeMSP
+      - NACOS_PEER_ID=peer0.fabric.gfe.com
+      - NACOS_PEER_ADDRESS=peer0.fabric.gfe.com:7051
+      - NACOS_PEER_MSP_KEYSTORE=/etc/hyperledger/crypto/user1/msp/keystore/407663b62f20ea0ae09f5e90941ab7ee3d0630f1a3aa5e05a78aedbb16f9736b_sk
+      - NACOS_PEER_MSP_ADMINCERTS=/etc/hyperledger/crypto/user1/msp/signcerts/User1@fabric.gfe.com-cert.pem
+      - FABRIC_NACOS_ORDERER_NAME=gfe.orderer.com
+      - FABRIC_NACOS_ORDERER_ADDR=grpcs://10.77.70.174:9050
+      - NACOS_ORDERER_TLS_PATH=/etc/hyperledger/crypto/register/orderer/tls/ca.crt
+      - FABRIC_NACOS_USERNAME=admin_cc_gfe
+    ports:
+      - 6051:7051
+      - 6053:7053
+      - 9006:8999
+    volumes:
+        - ./channel/crypto-config/peerOrganizations/fabric.ruc.com/users/Admin@fabric.ruc.com/:/etc/hyperledger/crypto/admin
+        - ./channel/crypto-config/ordererOrganizations/orderer.com/orderers/ruc.orderer.com/:/etc/hyperledger/crypto/orderer   
+        - ./channel/crypto-config/peerOrganizations/fabric.ruc.com/peers/peer0.fabric.ruc.com/:/etc/hyperledger/crypto/peer
+        - ./channel/crypto-config/peerOrganizations/fabric.gfe.com/peers/peer0.fabric.gfe.com/:/etc/hyperledger/crypto/register/peer
+        - ./channel/crypto-config/peerOrganizations/fabric.gfe.com/users/User1@fabric.gfe.com/:/etc/hyperledger/crypto/user1
+        - ./channel/crypto-config/ordererOrganizations/orderer.com/orderers/gfe.orderer.com/:/etc/hyperledger/crypto/register/orderer  
+    depends_on:
+      - ruc.orderer.com
+      - peer0.fabric.gfe.com
+      - gfe.orderer.com
+      - couchdb9
+  peer1.fabric.ruc.com:
+    container_name: peer1.fabric.ruc.com
+    extends:
+      file:   base.yaml
+      service: peer-base-gmn
+    environment:
+      - CORE_PEER_ID=peer1.fabric.ruc.com
+      - CORE_PEER_LOCALMSPID=RucMSP
+      - CORE_PEER_ADDRESS=peer1.fabric.ruc.com:7051
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb10:5984
+      - CORE_PEER_MSP_KEYSTORE=/etc/hyperledger/crypto/admin/msp/keystore/e0e6b9c15c87355a7b619880fc6eb6fa0827974f109f5d5d548def67849c0479_sk
+      - CORE_PEER_MSP_ADMINCERTS=/etc/hyperledger/crypto/admin/msp/signcerts/Admin@fabric.ruc.com-cert.pem
+      - FABRIC_ORDERER_NAME=ruc.orderer.com
+      - FABRIC_ORDERER_ADDR=grpcs://10.77.70.174:6050
+      - ORDERER_TLS_PATH=/etc/hyperledger/crypto/orderer/tls/ca.crt
+      - DB_URL=jdbc:mysql://10.77.70.174:3306/new_test?useSSL=false&autoReconnect=true&failOverReadOnly=false
+      - DB_USER=root
+      - DB_PASSWORD=1234qwer
+      - FABRIC_USERNAME=admin_cc_ruc
+      - NACOS_PEER_LOCALMSPID=GfeMSP
+      - NACOS_PEER_ID=peer0.fabric.gfe.com
+      - NACOS_PEER_ADDRESS=peer0.fabric.gfe.com:7051
+      - NACOS_PEER_MSP_KEYSTORE=/etc/hyperledger/crypto/user1/msp/keystore/407663b62f20ea0ae09f5e90941ab7ee3d0630f1a3aa5e05a78aedbb16f9736b_sk
+      - NACOS_PEER_MSP_ADMINCERTS=/etc/hyperledger/crypto/user1/msp/signcerts/User1@fabric.gfe.com-cert.pem
+      - FABRIC_NACOS_ORDERER_NAME=gfe.orderer.com
+      - FABRIC_NACOS_ORDERER_ADDR=grpcs://10.77.70.174:9050
+      - NACOS_ORDERER_TLS_PATH=/etc/hyperledger/crypto/register/orderer/tls/ca.crt
+      - FABRIC_NACOS_USERNAME=admin_cc_gfe
+    ports:
+      - 6056:7051
+      - 6058:7053
+      - 9007:8999
+    volumes:
+        - ./channel/crypto-config/peerOrganizations/fabric.ruc.com/users/Admin@fabric.ruc.com/:/etc/hyperledger/crypto/admin
+        - ./channel/crypto-config/ordererOrganizations/orderer.com/orderers/ruc.orderer.com/:/etc/hyperledger/crypto/orderer  
+        - ./channel/crypto-config/peerOrganizations/fabric.ruc.com/peers/peer1.fabric.ruc.com/:/etc/hyperledger/crypto/peer
+        - ./channel/crypto-config/peerOrganizations/fabric.gfe.com/peers/peer0.fabric.gfe.com/:/etc/hyperledger/crypto/register/peer
+        - ./channel/crypto-config/peerOrganizations/fabric.gfe.com/users/User1@fabric.gfe.com/:/etc/hyperledger/crypto/user1
+        - ./channel/crypto-config/ordererOrganizations/orderer.com/orderers/gfe.orderer.com/:/etc/hyperledger/crypto/register/orderer  
+    depends_on:
+      - ruc.orderer.com
+      - peer0.fabric.gfe.com
+      - gfe.orderer.com
+      - couchdb10
+
+  peer2.fabric.ruc.com:
+    container_name: peer2.fabric.ruc.com
+    extends:
+      file:   base.yaml
+      service: peer-base-gmn
+    environment:
+      - CORE_PEER_ID=peer2.fabric.ruc.com
+      - CORE_PEER_LOCALMSPID=RucMSP
+      - CORE_PEER_ADDRESS=peer2.fabric.ruc.com:7051
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb11:5984
+      - CORE_PEER_MSP_KEYSTORE=/etc/hyperledger/crypto/admin/msp/keystore/e0e6b9c15c87355a7b619880fc6eb6fa0827974f109f5d5d548def67849c0479_sk
+      - CORE_PEER_MSP_ADMINCERTS=/etc/hyperledger/crypto/admin/msp/signcerts/Admin@fabric.ruc.com-cert.pem
+      - FABRIC_ORDERER_NAME=ruc.orderer.com
+      - FABRIC_ORDERER_ADDR=grpcs://10.77.70.174:6050
+      - ORDERER_TLS_PATH=/etc/hyperledger/crypto/orderer/tls/ca.crt
+      - DB_URL=jdbc:mysql://10.77.70.174:3306/new_test?useSSL=false&autoReconnect=true&failOverReadOnly=false
+      - DB_USER=root
+      - DB_PASSWORD=1234qwer
+      - FABRIC_USERNAME=admin_cc_ruc
+      - NACOS_PEER_LOCALMSPID=GfeMSP
+      - NACOS_PEER_ID=peer0.fabric.gfe.com
+      - NACOS_PEER_ADDRESS=peer0.fabric.gfe.com:7051
+      - NACOS_PEER_MSP_KEYSTORE=/etc/hyperledger/crypto/user1/msp/keystore/407663b62f20ea0ae09f5e90941ab7ee3d0630f1a3aa5e05a78aedbb16f9736b_sk
+      - NACOS_PEER_MSP_ADMINCERTS=/etc/hyperledger/crypto/user1/msp/signcerts/User1@fabric.gfe.com-cert.pem
+      - FABRIC_NACOS_ORDERER_NAME=gfe.orderer.com
+      - FABRIC_NACOS_ORDERER_ADDR=grpcs://10.77.70.174:9050
+      - NACOS_ORDERER_TLS_PATH=/etc/hyperledger/crypto/register/orderer/tls/ca.crt
+      - FABRIC_NACOS_USERNAME=admin_cc_gfe
+    ports:
+      - 6061:7051
+      - 6063:7053
+      - 9008:8999
+    volumes:
+        - ./channel/crypto-config/peerOrganizations/fabric.ruc.com/users/Admin@fabric.ruc.com/:/etc/hyperledger/crypto/admin
+        - ./channel/crypto-config/ordererOrganizations/orderer.com/orderers/ruc.orderer.com/:/etc/hyperledger/crypto/orderer  
+        - ./channel/crypto-config/peerOrganizations/fabric.ruc.com/peers/peer2.fabric.ruc.com/:/etc/hyperledger/crypto/peer
+        - ./channel/crypto-config/peerOrganizations/fabric.gfe.com/peers/peer0.fabric.gfe.com/:/etc/hyperledger/crypto/register/peer
+        - ./channel/crypto-config/peerOrganizations/fabric.gfe.com/users/User1@fabric.gfe.com/:/etc/hyperledger/crypto/user1
+        - ./channel/crypto-config/ordererOrganizations/orderer.com/orderers/gfe.orderer.com/:/etc/hyperledger/crypto/register/orderer  
+    depends_on:
+      - ruc.orderer.com
+      - peer0.fabric.gfe.com
+      - gfe.orderer.com
+      - couchdb11
+
+  couchdb0:
+    extends:
+      file: base.yaml
+      service: couchdb-base
+    container_name: couchdb0
+    # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+    # for example map it to utilize Fauxton User Interface in dev environments.
+    ports:
+      - "5984:5984"  # this is the restful API addr, can also access fauxton web ui thru http://localhost:5984/_utils/
+
+  couchdb1:
+    extends:
+      file: base.yaml
+      service: couchdb-base
+    container_name: couchdb1
+    # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+    # for example map it to utilize Fauxton User Interface in dev environments.
+    ports:
+      - "6984:5984"
+
+  couchdb2:
+    extends:
+      file: base.yaml
+      service: couchdb-base
+    container_name: couchdb2
+    # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+    # for example map it to utilize Fauxton User Interface in dev environments.
+    ports:
+      - "7984:5984"
+
+  couchdb3:
+    extends:
+      file: base.yaml
+      service: couchdb-base
+    container_name: couchdb3
+    # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+    # for example map it to utilize Fauxton User Interface in dev environments.
+    ports:
+      - "8984:5984"
+
+  couchdb4:
+    extends:
+      file: base.yaml
+      service: couchdb-base
+    container_name: couchdb4
+    # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+    # for example map it to utilize Fauxton User Interface in dev environments.
+    ports:
+      - "5994:5984"  # this is the restful API addr, can also access fauxton web ui thru http://localhost:5984/_utils/
+
+  couchdb5:
+    extends:
+      file: base.yaml
+      service: couchdb-base
+    container_name: couchdb5
+    # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+    # for example map it to utilize Fauxton User Interface in dev environments.
+    ports:
+      - "6994:5984"
+
+  couchdb6:
+    extends:
+      file: base.yaml
+      service: couchdb-base
+    container_name: couchdb6
+    # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+    # for example map it to utilize Fauxton User Interface in dev environments.
+    ports:
+      - "7994:5984"
+
+  couchdb7:
+    extends:
+      file: base.yaml
+      service: couchdb-base
+    container_name: couchdb7
+    # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+    # for example map it to utilize Fauxton User Interface in dev environments.
+    ports:
+      - "8994:5984"
+
+  couchdb8:
+    extends:
+      file: base.yaml
+      service: couchdb-base
+    container_name: couchdb8
+    # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+    # for example map it to utilize Fauxton User Interface in dev environments.
+    ports:
+      - "5974:5984"  # this is the restful API addr, can also access fauxton web ui thru http://localhost:5984/_utils/
+
+  couchdb9:
+    extends:
+      file: base.yaml
+      service: couchdb-base
+    container_name: couchdb9
+    # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+    # for example map it to utilize Fauxton User Interface in dev environments.
+    ports:
+      - "6974:5984"
+
+  couchdb10:
+    extends:
+      file: base.yaml
+      service: couchdb-base
+    container_name: couchdb10
+    # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+    # for example map it to utilize Fauxton User Interface in dev environments.
+    ports:
+      - "7974:5984"
+
+  couchdb11:
+    extends:
+      file: base.yaml
+      service: couchdb-base
+    container_name: couchdb11
+    # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+    # for example map it to utilize Fauxton User Interface in dev environments.
+    ports:
+      - "8974:5984"

@@ -1,0 +1,974 @@
+[2021-01-31 18:59:45.815] [INFO] SampleWebApp - ****************** SERVER STARTED ************************
+[2021-01-31 18:59:45.818] [INFO] SampleWebApp - ***************  http://localhost:4000  ******************
+[2021-01-31 18:59:46.212] [INFO] SampleWebApp - app started!
+[2021-01-31 18:59:54.381] [INFO] Helper - User admin_cc_gfe was not enrolled, so we will need an admin user object to register
+[2021-01-31 18:59:55.113] [INFO] Helper - User admin_cc_deke was not enrolled, so we will need an admin user object to register
+[2021-01-31 18:59:55.654] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 18:59:55.727] [ERROR] Create-Channel - 
+!!!!!!!!! Failed to create the channel 'registerchannel' !!!!!!!!!
+
+
+[2021-01-31 18:59:55.727] [ERROR] Create-Channel - Error: Failed to create the channel 'registerchannel'
+    at Object.createChannel (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/app/create-channel.js:61:10)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+[2021-01-31 19:00:01.774] [INFO] Helper - Successfully loaded member from persistence
+[2021-01-31 19:00:01.827] [INFO] Helper - Successfully loaded member from persistence
+[2021-01-31 19:00:01.871] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 19:00:05.090] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 19:00:05.091] [INFO] Join-Channel - Calling peers in organization "Gfe" to join the channel
+[2021-01-31 19:00:05.848] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7053 registerchannel
+[2021-01-31 19:00:05.920] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7058 registerchannel
+[2021-01-31 19:00:05.974] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7063 registerchannel
+[2021-01-31 19:00:05.975] [INFO] Join-Channel - Successfully joined peer to the channel registerchannel
+[2021-01-31 19:00:05.975] [INFO] Join-Channel - Successfully joined peer to the channel registerchannel
+[2021-01-31 19:00:05.975] [INFO] Join-Channel - Successfully joined peer to the channel registerchannel
+[2021-01-31 19:00:05.999] [INFO] Join-Channel - Successfully joined peers in organization Gfe to the channel:registerchannel
+[2021-01-31 19:00:09.030] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 19:00:09.030] [INFO] Join-Channel - Calling peers in organization "Deke" to join the channel
+[2021-01-31 19:00:09.456] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8053 registerchannel
+[2021-01-31 19:00:22.222] [INFO] Helper - Successfully loaded member from persistence
+[2021-01-31 19:00:22.287] [INFO] Helper - User admin_cc_dbiir was not enrolled, so we will need an admin user object to register
+[2021-01-31 19:00:22.960] [INFO] Helper - User admin_cc_ruc was not enrolled, so we will need an admin user object to register
+[2021-01-31 19:00:23.477] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 19:00:26.732] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 19:00:26.732] [INFO] Join-Channel - Calling peers in organization "Deke" to join the channel
+[2021-01-31 19:00:27.337] [ERROR] Join-Channel - Unknown channel block event received from localhost:8053
+[2021-01-31 19:00:27.340] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8053 monitorchannel
+[2021-01-31 19:00:27.547] [ERROR] Join-Channel - Unknown channel block event received from localhost:8058
+[2021-01-31 19:00:27.548] [ERROR] Join-Channel - Error: Unknown channel block event received from localhost:8058
+    at eh.registerBlockEvent (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/app/join-channel.js:78:15)
+    at /Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:761:4
+    at Array.forEach (<anonymous>)
+    at EventHub._processBlockOnEvents (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:759:36)
+    at ClientDuplexStream.<anonymous> (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:312:10)
+    at emitOne (events.js:116:13)
+    at ClientDuplexStream.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at ClientDuplexStream.Readable.push (_stream_readable.js:208:10)
+[2021-01-31 19:00:27.548] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 19:00:27.551] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 19:00:27.555] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 19:00:27.559] [ERROR] Join-Channel - Failed to join all peers to channel. cause:Error: Unknown channel block event received from localhost:8058
+[2021-01-31 19:00:27.562] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8058 monitorchannel
+[2021-01-31 19:00:27.569] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8063 monitorchannel
+[2021-01-31 19:00:27.571] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 19:00:27.572] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 19:00:27.572] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 19:00:27.580] [INFO] Join-Channel - Successfully joined peers in organization Deke to the channel:monitorchannel
+[2021-01-31 19:00:30.600] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 19:00:30.600] [INFO] Join-Channel - Calling peers in organization "Dbiir" to join the channel
+[2021-01-31 19:00:30.684] [ERROR] Join-Channel - Problem setting up the event hub :Error: 14 UNAVAILABLE: Connect Failed
+[2021-01-31 19:00:30.688] [ERROR] Join-Channel - Error: Problem setting up the event hub :Error: 14 UNAVAILABLE: Connect Failed
+    at eh.registerBlockEvent (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/app/join-channel.js:85:13)
+    at closer (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:441:5)
+    at EventHub._closeAllCallbacks (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:446:3)
+    at EventHub._disconnect (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:387:8)
+    at ClientDuplexStream.<anonymous> (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:358:10)
+    at emitOne (events.js:116:13)
+    at ClientDuplexStream.emit (events.js:211:7)
+    at ClientDuplexStream._emitStatusIfDone (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/_grpc@1.10.1@grpc/src/client.js:271:12)
+    at ClientDuplexStream._readsDone (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/_grpc@1.10.1@grpc/src/client.js:236:8)
+    at readCallback (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/_grpc@1.10.1@grpc/src/client.js:296:12)
+[2021-01-31 19:00:30.689] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 19:00:30.692] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 19:00:30.694] [ERROR] Join-Channel - Failed to join all peers to channel. cause:Error: Problem setting up the event hub :Error: 14 UNAVAILABLE: Connect Failed
+[2021-01-31 19:02:57.013] [INFO] SampleWebApp - ****************** SERVER STARTED ************************
+[2021-01-31 19:02:57.016] [INFO] SampleWebApp - ***************  http://localhost:4000  ******************
+[2021-01-31 19:02:57.422] [INFO] SampleWebApp - app started!
+[2021-01-31 19:03:32.619] [INFO] Helper - User admin_cc_deke was not enrolled, so we will need an admin user object to register
+[2021-01-31 19:03:33.287] [INFO] Helper - User admin_cc_dbiir was not enrolled, so we will need an admin user object to register
+[2021-01-31 19:03:33.809] [INFO] Helper - User admin_cc_ruc was not enrolled, so we will need an admin user object to register
+[2021-01-31 19:03:34.423] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 19:03:37.716] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 19:03:37.717] [INFO] Join-Channel - Calling peers in organization "Deke" to join the channel
+[2021-01-31 19:03:38.541] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8063 monitorchannel
+[2021-01-31 19:03:38.589] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8058 monitorchannel
+[2021-01-31 19:03:38.592] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8053 monitorchannel
+[2021-01-31 19:03:38.592] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 19:03:38.592] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 19:03:38.592] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 19:03:38.606] [INFO] Join-Channel - Successfully joined peers in organization Deke to the channel:monitorchannel
+[2021-01-31 19:03:41.626] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 19:03:41.626] [INFO] Join-Channel - Calling peers in organization "Dbiir" to join the channel
+[2021-01-31 19:03:41.728] [ERROR] Join-Channel - Problem setting up the event hub :Error: 14 UNAVAILABLE: Connect Failed
+[2021-01-31 19:03:41.733] [ERROR] Join-Channel - Error: Problem setting up the event hub :Error: 14 UNAVAILABLE: Connect Failed
+    at eh.registerBlockEvent (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/app/join-channel.js:85:13)
+    at closer (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:441:5)
+    at EventHub._closeAllCallbacks (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:446:3)
+    at EventHub._disconnect (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:387:8)
+    at ClientDuplexStream.<anonymous> (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:358:10)
+    at emitOne (events.js:116:13)
+    at ClientDuplexStream.emit (events.js:211:7)
+    at ClientDuplexStream._emitStatusIfDone (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/_grpc@1.10.1@grpc/src/client.js:271:12)
+    at ClientDuplexStream._readsDone (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/_grpc@1.10.1@grpc/src/client.js:236:8)
+    at readCallback (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/_grpc@1.10.1@grpc/src/client.js:296:12)
+[2021-01-31 19:03:41.733] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 19:03:41.736] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 19:03:41.739] [ERROR] Join-Channel - Failed to join all peers to channel. cause:Error: Problem setting up the event hub :Error: 14 UNAVAILABLE: Connect Failed
+[2021-01-31 19:04:53.785] [INFO] SampleWebApp - ****************** SERVER STARTED ************************
+[2021-01-31 19:04:53.787] [INFO] SampleWebApp - ***************  http://localhost:4000  ******************
+[2021-01-31 19:04:54.285] [INFO] SampleWebApp - app started!
+[2021-01-31 19:05:17.059] [INFO] Helper - User admin_cc_deke was not enrolled, so we will need an admin user object to register
+[2021-01-31 19:05:17.713] [INFO] Helper - User admin_cc_dbiir was not enrolled, so we will need an admin user object to register
+[2021-01-31 19:05:18.308] [INFO] Helper - User admin_cc_ruc was not enrolled, so we will need an admin user object to register
+[2021-01-31 19:05:18.912] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 19:05:22.184] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 19:05:22.185] [INFO] Join-Channel - Calling peers in organization "Deke" to join the channel
+[2021-01-31 19:05:22.899] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8058 monitorchannel
+[2021-01-31 19:05:23.062] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8063 monitorchannel
+[2021-01-31 19:05:23.092] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8053 monitorchannel
+[2021-01-31 19:05:23.095] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 19:05:23.095] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 19:05:23.095] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 19:05:23.108] [INFO] Join-Channel - Successfully joined peers in organization Deke to the channel:monitorchannel
+[2021-01-31 19:05:26.125] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 19:05:26.125] [INFO] Join-Channel - Calling peers in organization "Ruc" to join the channel
+[2021-01-31 19:05:26.983] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6063 monitorchannel
+[2021-01-31 19:05:27.050] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6058 monitorchannel
+[2021-01-31 19:05:27.190] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6053 monitorchannel
+[2021-01-31 19:05:27.191] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 19:05:27.191] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 19:05:27.191] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 19:05:27.199] [INFO] Join-Channel - Successfully joined peers in organization Ruc to the channel:monitorchannel
+[2021-01-31 19:05:30.230] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 19:05:30.231] [INFO] Join-Channel - Calling peers in organization "Dbiir" to join the channel
+[2021-01-31 19:05:30.341] [ERROR] Join-Channel - Problem setting up the event hub :Error: 14 UNAVAILABLE: Connect Failed
+[2021-01-31 19:05:30.344] [ERROR] Join-Channel - Error: Problem setting up the event hub :Error: 14 UNAVAILABLE: Connect Failed
+    at eh.registerBlockEvent (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/app/join-channel.js:85:13)
+    at closer (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:441:5)
+    at EventHub._closeAllCallbacks (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:446:3)
+    at EventHub._disconnect (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:387:8)
+    at ClientDuplexStream.<anonymous> (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:358:10)
+    at emitOne (events.js:116:13)
+    at ClientDuplexStream.emit (events.js:211:7)
+    at ClientDuplexStream._emitStatusIfDone (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/_grpc@1.10.1@grpc/src/client.js:271:12)
+    at ClientDuplexStream._readsDone (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/_grpc@1.10.1@grpc/src/client.js:236:8)
+    at readCallback (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/_grpc@1.10.1@grpc/src/client.js:296:12)
+[2021-01-31 19:05:30.345] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 19:05:30.348] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 19:05:30.350] [ERROR] Join-Channel - Failed to join all peers to channel. cause:Error: Problem setting up the event hub :Error: 14 UNAVAILABLE: Connect Failed
+[2021-01-31 19:24:29.203] [INFO] Helper - User admin_cc_gfe was not enrolled, so we will need an admin user object to register
+[2021-01-31 19:24:29.804] [INFO] Helper - Successfully loaded member from persistence
+[2021-01-31 19:24:29.848] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 19:24:33.158] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 19:24:33.158] [INFO] Join-Channel - Calling peers in organization "Gfe" to join the channel
+[2021-01-31 19:24:34.111] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7063 registerchannel
+[2021-01-31 19:24:34.116] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7058 registerchannel
+[2021-01-31 19:24:34.144] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7053 registerchannel
+[2021-01-31 19:24:34.145] [INFO] Join-Channel - Successfully joined peer to the channel registerchannel
+[2021-01-31 19:24:34.145] [INFO] Join-Channel - Successfully joined peer to the channel registerchannel
+[2021-01-31 19:24:34.145] [INFO] Join-Channel - Successfully joined peer to the channel registerchannel
+[2021-01-31 19:24:34.158] [INFO] Join-Channel - Successfully joined peers in organization Gfe to the channel:registerchannel
+[2021-01-31 19:24:37.180] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 19:24:37.180] [INFO] Join-Channel - Calling peers in organization "Deke" to join the channel
+[2021-01-31 19:24:37.557] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8053 registerchannel
+[2021-01-31 19:24:47.029] [INFO] Helper - Successfully loaded member from persistence
+[2021-01-31 19:24:47.073] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 19:24:50.274] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 19:24:50.274] [INFO] Join-Channel - Calling peers in organization "Gfe" to join the channel
+[2021-01-31 19:24:50.607] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7063 softwarechannel
+[2021-01-31 19:25:37.242] [ERROR] Join-Channel - REQUEST_TIMEOUT:localhost:8058
+[2021-01-31 19:25:37.242] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 19:25:37.247] [ERROR] Join-Channel - Error: Problem setting up the event hub :Error: EventHub has been shutdown
+    at eh.registerBlockEvent (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/app/join-channel.js:85:13)
+    at closer (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:441:5)
+    at EventHub._closeAllCallbacks (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:446:3)
+    at EventHub._disconnect (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:387:8)
+    at EventHub.disconnect (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:376:8)
+    at Timeout.setTimeout (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/app/join-channel.js:60:9)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)
+[2021-01-31 19:25:37.247] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 19:25:37.253] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 19:25:37.259] [ERROR] Join-Channel - Failed to join all peers to channel. cause:Error: Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 19:25:50.326] [ERROR] Join-Channel - REQUEST_TIMEOUT:localhost:7053
+[2021-01-31 19:25:50.326] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 19:25:50.329] [ERROR] Join-Channel - Error: Problem setting up the event hub :Error: EventHub has been shutdown
+    at eh.registerBlockEvent (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/app/join-channel.js:85:13)
+    at closer (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:441:5)
+    at EventHub._closeAllCallbacks (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:446:3)
+    at EventHub._disconnect (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:387:8)
+    at EventHub.disconnect (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:376:8)
+    at Timeout.setTimeout (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/app/join-channel.js:60:9)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)
+[2021-01-31 19:25:50.330] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 19:25:50.334] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 19:25:50.337] [ERROR] Join-Channel - Failed to join all peers to channel. cause:Error: Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 19:26:06.324] [INFO] Helper - Successfully loaded member from persistence
+[2021-01-31 19:26:06.369] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 19:26:06.370] [INFO] Join-Channel - Calling peers in organization "Dbiir" to join the channel
+[2021-01-31 19:26:06.468] [ERROR] Join-Channel - Problem setting up the event hub :Error: 14 UNAVAILABLE: Connect Failed
+[2021-01-31 19:26:06.473] [ERROR] Join-Channel - Error: Problem setting up the event hub :Error: 14 UNAVAILABLE: Connect Failed
+    at eh.registerBlockEvent (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/app/join-channel.js:85:13)
+    at closer (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:441:5)
+    at EventHub._closeAllCallbacks (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:446:3)
+    at EventHub._disconnect (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:387:8)
+    at ClientDuplexStream.<anonymous> (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:358:10)
+    at emitOne (events.js:116:13)
+    at ClientDuplexStream.emit (events.js:211:7)
+    at ClientDuplexStream._emitStatusIfDone (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/_grpc@1.10.1@grpc/src/client.js:271:12)
+    at ClientDuplexStream._readsDone (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/_grpc@1.10.1@grpc/src/client.js:236:8)
+    at readCallback (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/_grpc@1.10.1@grpc/src/client.js:296:12)
+[2021-01-31 19:26:06.474] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 19:26:06.477] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 19:26:06.480] [ERROR] Join-Channel - Failed to join all peers to channel. cause:Error: Problem setting up the event hub :Error: 14 UNAVAILABLE: Connect Failed
+[2021-01-31 19:37:46.245] [INFO] SampleWebApp - ****************** SERVER STARTED ************************
+[2021-01-31 19:37:46.247] [INFO] SampleWebApp - ***************  http://localhost:4000  ******************
+[2021-01-31 19:37:46.664] [INFO] SampleWebApp - app started!
+[2021-01-31 19:38:41.517] [INFO] Helper - User admin_cc_deke was not enrolled, so we will need an admin user object to register
+[2021-01-31 19:38:42.165] [INFO] Helper - User admin_cc_dbiir was not enrolled, so we will need an admin user object to register
+[2021-01-31 19:38:42.706] [INFO] Helper - User admin_cc_ruc was not enrolled, so we will need an admin user object to register
+[2021-01-31 19:38:43.209] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 19:38:46.438] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 19:38:46.441] [INFO] Join-Channel - Calling peers in organization "Deke" to join the channel
+[2021-01-31 19:38:47.205] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8058 monitorchannel
+[2021-01-31 19:38:47.260] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8053 monitorchannel
+[2021-01-31 19:38:47.290] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8063 monitorchannel
+[2021-01-31 19:38:47.291] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 19:38:47.291] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 19:38:47.291] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 19:38:47.304] [INFO] Join-Channel - Successfully joined peers in organization Deke to the channel:monitorchannel
+[2021-01-31 19:38:50.331] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 19:38:50.331] [INFO] Join-Channel - Calling peers in organization "Ruc" to join the channel
+[2021-01-31 19:38:51.041] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6058 monitorchannel
+[2021-01-31 19:38:51.160] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6063 monitorchannel
+[2021-01-31 19:38:51.205] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6053 monitorchannel
+[2021-01-31 19:38:51.205] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 19:38:51.206] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 19:38:51.206] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 19:38:51.216] [INFO] Join-Channel - Successfully joined peers in organization Ruc to the channel:monitorchannel
+[2021-01-31 19:38:54.237] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 19:38:54.238] [INFO] Join-Channel - Calling peers in organization "Dbiir" to join the channel
+[2021-01-31 19:38:54.431] [ERROR] Join-Channel - Problem setting up the event hub :Error: 14 UNAVAILABLE: Connect Failed
+[2021-01-31 19:38:54.436] [ERROR] Join-Channel - Error: Problem setting up the event hub :Error: 14 UNAVAILABLE: Connect Failed
+    at eh.registerBlockEvent (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/app/join-channel.js:85:13)
+    at closer (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:441:5)
+    at EventHub._closeAllCallbacks (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:446:3)
+    at EventHub._disconnect (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:387:8)
+    at ClientDuplexStream.<anonymous> (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:358:10)
+    at emitOne (events.js:116:13)
+    at ClientDuplexStream.emit (events.js:211:7)
+    at ClientDuplexStream._emitStatusIfDone (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/_grpc@1.10.1@grpc/src/client.js:271:12)
+    at ClientDuplexStream._readsDone (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/_grpc@1.10.1@grpc/src/client.js:236:8)
+    at readCallback (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/_grpc@1.10.1@grpc/src/client.js:296:12)
+[2021-01-31 19:38:54.437] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 19:38:54.441] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 19:38:54.445] [ERROR] Join-Channel - Failed to join all peers to channel. cause:Error: Problem setting up the event hub :Error: 14 UNAVAILABLE: Connect Failed
+[2021-01-31 20:15:51.999] [INFO] SampleWebApp - ****************** SERVER STARTED ************************
+[2021-01-31 20:15:52.002] [INFO] SampleWebApp - ***************  http://localhost:4000  ******************
+[2021-01-31 20:15:52.416] [INFO] SampleWebApp - app started!
+[2021-01-31 20:17:15.623] [INFO] Helper - User admin_cc_deke was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:17:16.260] [INFO] Helper - User admin_cc_dbiir was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:17:16.799] [INFO] Helper - User admin_cc_ruc was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:17:17.319] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:17:20.549] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:17:20.549] [INFO] Join-Channel - Calling peers in organization "Deke" to join the channel
+[2021-01-31 20:17:21.272] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8053 monitorchannel
+[2021-01-31 20:17:21.394] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8058 monitorchannel
+[2021-01-31 20:17:21.414] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8063 monitorchannel
+[2021-01-31 20:17:21.418] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:17:21.419] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:17:21.419] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:17:21.432] [INFO] Join-Channel - Successfully joined peers in organization Deke to the channel:monitorchannel
+[2021-01-31 20:17:24.448] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:17:24.448] [INFO] Join-Channel - Calling peers in organization "Dbiir" to join the channel
+[2021-01-31 20:17:24.527] [ERROR] Join-Channel - Problem setting up the event hub :Error: 14 UNAVAILABLE: Connect Failed
+[2021-01-31 20:17:24.532] [ERROR] Join-Channel - Error: Problem setting up the event hub :Error: 14 UNAVAILABLE: Connect Failed
+    at eh.registerBlockEvent (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/app/join-channel.js:85:13)
+    at closer (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:441:5)
+    at EventHub._closeAllCallbacks (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:446:3)
+    at EventHub._disconnect (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:387:8)
+    at ClientDuplexStream.<anonymous> (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:358:10)
+    at emitOne (events.js:116:13)
+    at ClientDuplexStream.emit (events.js:211:7)
+    at ClientDuplexStream._emitStatusIfDone (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/_grpc@1.10.1@grpc/src/client.js:271:12)
+    at ClientDuplexStream._readsDone (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/_grpc@1.10.1@grpc/src/client.js:236:8)
+    at readCallback (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/_grpc@1.10.1@grpc/src/client.js:296:12)
+[2021-01-31 20:17:24.533] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 20:17:24.535] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 20:17:24.537] [ERROR] Join-Channel - Failed to join all peers to channel. cause:Error: Problem setting up the event hub :Error: 14 UNAVAILABLE: Connect Failed
+[2021-01-31 20:19:29.682] [INFO] SampleWebApp - ****************** SERVER STARTED ************************
+[2021-01-31 20:19:29.685] [INFO] SampleWebApp - ***************  http://localhost:4000  ******************
+[2021-01-31 20:19:30.085] [INFO] SampleWebApp - app started!
+[2021-01-31 20:20:30.390] [INFO] Helper - User admin_cc_deke was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:20:31.045] [INFO] Helper - User admin_cc_dbiir was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:20:31.592] [INFO] Helper - User admin_cc_ruc was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:20:32.108] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:20:35.312] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:20:35.313] [INFO] Join-Channel - Calling peers in organization "Deke" to join the channel
+[2021-01-31 20:20:36.050] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8058 monitorchannel
+[2021-01-31 20:20:36.092] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8063 monitorchannel
+[2021-01-31 20:20:36.244] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8053 monitorchannel
+[2021-01-31 20:20:36.244] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:20:36.244] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:20:36.244] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:20:36.258] [INFO] Join-Channel - Successfully joined peers in organization Deke to the channel:monitorchannel
+[2021-01-31 20:20:39.282] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:20:39.283] [INFO] Join-Channel - Calling peers in organization "Dbiir" to join the channel
+[2021-01-31 20:20:40.181] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:9053 monitorchannel
+[2021-01-31 20:20:40.271] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:9063 monitorchannel
+[2021-01-31 20:21:50.734] [INFO] SampleWebApp - ****************** SERVER STARTED ************************
+[2021-01-31 20:21:50.737] [INFO] SampleWebApp - ***************  http://localhost:4000  ******************
+[2021-01-31 20:21:51.174] [INFO] SampleWebApp - app started!
+[2021-01-31 20:22:07.050] [INFO] Helper - User admin_cc_deke was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:22:07.754] [INFO] Helper - User admin_cc_dbiir was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:22:08.327] [INFO] Helper - User admin_cc_ruc was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:22:08.855] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:22:12.069] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:22:12.070] [INFO] Join-Channel - Calling peers in organization "Deke" to join the channel
+[2021-01-31 20:22:12.853] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8063 monitorchannel
+[2021-01-31 20:22:12.877] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8058 monitorchannel
+[2021-01-31 20:22:12.921] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8053 monitorchannel
+[2021-01-31 20:22:12.922] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:22:12.922] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:22:12.922] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:22:12.935] [INFO] Join-Channel - Successfully joined peers in organization Deke to the channel:monitorchannel
+[2021-01-31 20:22:15.954] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:22:15.955] [INFO] Join-Channel - Calling peers in organization "Dbiir" to join the channel
+[2021-01-31 20:22:16.768] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:9063 monitorchannel
+[2021-01-31 20:22:16.842] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:9053 monitorchannel
+[2021-01-31 20:22:16.974] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:9058 monitorchannel
+[2021-01-31 20:22:16.974] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:22:16.975] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:22:16.975] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:22:16.984] [INFO] Join-Channel - Successfully joined peers in organization Dbiir to the channel:monitorchannel
+[2021-01-31 20:22:20.004] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:22:20.004] [INFO] Join-Channel - Calling peers in organization "Ruc" to join the channel
+[2021-01-31 20:22:20.687] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6063 monitorchannel
+[2021-01-31 20:22:20.787] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6053 monitorchannel
+[2021-01-31 20:22:20.797] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6058 monitorchannel
+[2021-01-31 20:22:20.798] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:22:20.798] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:22:20.798] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:22:20.807] [INFO] Join-Channel - Successfully joined peers in organization Ruc to the channel:monitorchannel
+[2021-01-31 20:23:50.935] [INFO] SampleWebApp - ****************** SERVER STARTED ************************
+[2021-01-31 20:23:50.939] [INFO] SampleWebApp - ***************  http://localhost:4000  ******************
+[2021-01-31 20:23:51.367] [INFO] SampleWebApp - app started!
+[2021-01-31 20:24:05.751] [INFO] Helper - User admin_cc_deke was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:24:06.563] [INFO] Helper - User admin_cc_dbiir was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:24:07.137] [INFO] Helper - User admin_cc_ruc was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:24:07.638] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:24:10.931] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:24:10.931] [INFO] Join-Channel - Calling peers in organization "Deke" to join the channel
+[2021-01-31 20:24:11.709] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8063 monitorchannel
+[2021-01-31 20:24:11.739] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8058 monitorchannel
+[2021-01-31 20:24:11.845] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8053 monitorchannel
+[2021-01-31 20:24:11.846] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:24:11.846] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:24:11.846] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:24:11.858] [INFO] Join-Channel - Successfully joined peers in organization Deke to the channel:monitorchannel
+[2021-01-31 20:24:14.874] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:24:14.875] [INFO] Join-Channel - Calling peers in organization "Dbiir" to join the channel
+[2021-01-31 20:24:15.658] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:9058 monitorchannel
+[2021-01-31 20:24:15.681] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:9053 monitorchannel
+[2021-01-31 20:24:15.705] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:9063 monitorchannel
+[2021-01-31 20:24:15.706] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:24:15.706] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:24:15.706] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:24:15.721] [INFO] Join-Channel - Successfully joined peers in organization Dbiir to the channel:monitorchannel
+[2021-01-31 20:24:18.741] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:24:18.742] [INFO] Join-Channel - Calling peers in organization "Ruc" to join the channel
+[2021-01-31 20:24:19.829] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6063 monitorchannel
+[2021-01-31 20:24:19.838] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6053 monitorchannel
+[2021-01-31 20:24:19.878] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6058 monitorchannel
+[2021-01-31 20:24:19.878] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:24:19.879] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:24:19.879] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:24:19.891] [INFO] Join-Channel - Successfully joined peers in organization Ruc to the channel:monitorchannel
+[2021-01-31 20:27:19.108] [INFO] SampleWebApp - ****************** SERVER STARTED ************************
+[2021-01-31 20:27:19.111] [INFO] SampleWebApp - ***************  http://localhost:4000  ******************
+[2021-01-31 20:27:19.541] [INFO] SampleWebApp - app started!
+[2021-01-31 20:28:04.382] [INFO] Helper - User admin_cc_deke was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:28:05.039] [INFO] Helper - User admin_cc_dbiir was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:28:05.600] [INFO] Helper - User admin_cc_ruc was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:28:06.175] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:28:09.422] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:28:09.423] [INFO] Join-Channel - Calling peers in organization "Deke" to join the channel
+[2021-01-31 20:28:10.167] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8058 monitorchannel
+[2021-01-31 20:28:10.277] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8063 monitorchannel
+[2021-01-31 20:28:10.284] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8053 monitorchannel
+[2021-01-31 20:28:10.285] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:28:10.285] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:28:10.285] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:28:10.299] [INFO] Join-Channel - Successfully joined peers in organization Deke to the channel:monitorchannel
+[2021-01-31 20:28:13.322] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:28:13.322] [INFO] Join-Channel - Calling peers in organization "Dbiir" to join the channel
+[2021-01-31 20:28:13.408] [ERROR] Join-Channel - Problem setting up the event hub :Error: 14 UNAVAILABLE: Connect Failed
+[2021-01-31 20:28:13.414] [ERROR] Join-Channel - Error: Problem setting up the event hub :Error: 14 UNAVAILABLE: Connect Failed
+    at eh.registerBlockEvent (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/app/join-channel.js:85:13)
+    at closer (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:441:5)
+    at EventHub._closeAllCallbacks (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:446:3)
+    at EventHub._disconnect (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:387:8)
+    at ClientDuplexStream.<anonymous> (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:358:10)
+    at emitOne (events.js:116:13)
+    at ClientDuplexStream.emit (events.js:211:7)
+    at ClientDuplexStream._emitStatusIfDone (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/_grpc@1.10.1@grpc/src/client.js:271:12)
+    at ClientDuplexStream._readsDone (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/_grpc@1.10.1@grpc/src/client.js:236:8)
+    at readCallback (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/_grpc@1.10.1@grpc/src/client.js:296:12)
+[2021-01-31 20:28:13.414] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 20:28:13.418] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 20:28:13.420] [ERROR] Join-Channel - Failed to join all peers to channel. cause:Error: Problem setting up the event hub :Error: 14 UNAVAILABLE: Connect Failed
+[2021-01-31 20:31:07.042] [INFO] SampleWebApp - ****************** SERVER STARTED ************************
+[2021-01-31 20:31:07.044] [INFO] SampleWebApp - ***************  http://localhost:4000  ******************
+[2021-01-31 20:31:07.414] [INFO] SampleWebApp - app started!
+[2021-01-31 20:31:44.985] [INFO] Helper - User admin_cc_deke was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:31:45.605] [INFO] Helper - User admin_cc_dbiir was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:31:46.124] [INFO] Helper - User admin_cc_ruc was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:31:46.627] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:31:49.948] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:31:49.949] [INFO] Join-Channel - Calling peers in organization "Deke" to join the channel
+[2021-01-31 20:31:50.836] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8053 monitorchannel
+[2021-01-31 20:31:50.847] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8063 monitorchannel
+[2021-01-31 20:31:50.872] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8058 monitorchannel
+[2021-01-31 20:31:50.873] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:31:50.873] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:31:50.873] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:31:50.886] [INFO] Join-Channel - Successfully joined peers in organization Deke to the channel:monitorchannel
+[2021-01-31 20:31:53.905] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:31:53.905] [INFO] Join-Channel - Calling peers in organization "Dbiir" to join the channel
+[2021-01-31 20:31:54.871] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:9058 monitorchannel
+[2021-01-31 20:31:54.921] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:9053 monitorchannel
+[2021-01-31 20:31:54.980] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:9063 monitorchannel
+[2021-01-31 20:31:54.981] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:31:54.981] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:31:54.981] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:31:54.991] [INFO] Join-Channel - Successfully joined peers in organization Dbiir to the channel:monitorchannel
+[2021-01-31 20:31:58.020] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:31:58.021] [INFO] Join-Channel - Calling peers in organization "Ruc" to join the channel
+[2021-01-31 20:31:58.929] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6058 monitorchannel
+[2021-01-31 20:31:59.097] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6063 monitorchannel
+[2021-01-31 20:31:59.129] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6053 monitorchannel
+[2021-01-31 20:31:59.143] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:31:59.143] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:31:59.143] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:31:59.151] [INFO] Join-Channel - Successfully joined peers in organization Ruc to the channel:monitorchannel
+[2021-01-31 20:35:03.614] [INFO] SampleWebApp - ****************** SERVER STARTED ************************
+[2021-01-31 20:35:03.616] [INFO] SampleWebApp - ***************  http://localhost:4000  ******************
+[2021-01-31 20:35:04.004] [INFO] SampleWebApp - app started!
+[2021-01-31 20:35:20.210] [INFO] Helper - User admin_cc_deke was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:35:20.895] [INFO] Helper - User admin_cc_dbiir was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:35:21.446] [INFO] Helper - User admin_cc_ruc was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:35:21.964] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:35:25.216] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:35:25.217] [INFO] Join-Channel - Calling peers in organization "Deke" to join the channel
+[2021-01-31 20:35:26.276] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8063 monitorchannel
+[2021-01-31 20:35:26.322] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8053 monitorchannel
+[2021-01-31 20:35:26.345] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8058 monitorchannel
+[2021-01-31 20:35:26.346] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:35:26.346] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:35:26.346] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:35:26.362] [INFO] Join-Channel - Successfully joined peers in organization Deke to the channel:monitorchannel
+[2021-01-31 20:35:29.387] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:35:29.387] [INFO] Join-Channel - Calling peers in organization "Dbiir" to join the channel
+[2021-01-31 20:35:30.186] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:9053 monitorchannel
+[2021-01-31 20:35:30.349] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:9063 monitorchannel
+[2021-01-31 20:35:30.376] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:9058 monitorchannel
+[2021-01-31 20:35:30.377] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:35:30.377] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:35:30.377] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:35:30.387] [INFO] Join-Channel - Successfully joined peers in organization Dbiir to the channel:monitorchannel
+[2021-01-31 20:35:33.409] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:35:33.409] [INFO] Join-Channel - Calling peers in organization "Ruc" to join the channel
+[2021-01-31 20:35:34.297] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6058 monitorchannel
+[2021-01-31 20:35:34.409] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6063 monitorchannel
+[2021-01-31 20:35:34.416] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6053 monitorchannel
+[2021-01-31 20:35:34.428] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:35:34.428] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:35:34.428] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:35:34.437] [INFO] Join-Channel - Successfully joined peers in organization Ruc to the channel:monitorchannel
+[2021-01-31 20:37:31.572] [INFO] SampleWebApp - ****************** SERVER STARTED ************************
+[2021-01-31 20:37:31.575] [INFO] SampleWebApp - ***************  http://localhost:4000  ******************
+[2021-01-31 20:37:31.955] [INFO] SampleWebApp - app started!
+[2021-01-31 20:38:08.338] [INFO] Helper - User admin_cc_deke was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:38:09.001] [INFO] Helper - User admin_cc_dbiir was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:38:09.545] [INFO] Helper - User admin_cc_ruc was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:38:10.072] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:38:13.312] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:38:13.313] [INFO] Join-Channel - Calling peers in organization "Deke" to join the channel
+[2021-01-31 20:38:14.217] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8058 monitorchannel
+[2021-01-31 20:38:14.323] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8063 monitorchannel
+[2021-01-31 20:38:14.364] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8053 monitorchannel
+[2021-01-31 20:38:14.366] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:38:14.366] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:38:14.366] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:38:14.388] [INFO] Join-Channel - Successfully joined peers in organization Deke to the channel:monitorchannel
+[2021-01-31 20:38:17.411] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:38:17.411] [INFO] Join-Channel - Calling peers in organization "Dbiir" to join the channel
+[2021-01-31 20:38:17.501] [ERROR] Join-Channel - Problem setting up the event hub :Error: 14 UNAVAILABLE: Connect Failed
+[2021-01-31 20:38:17.504] [ERROR] Join-Channel - Error: Problem setting up the event hub :Error: 14 UNAVAILABLE: Connect Failed
+    at eh.registerBlockEvent (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/app/join-channel.js:85:13)
+    at closer (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:441:5)
+    at EventHub._closeAllCallbacks (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:446:3)
+    at EventHub._disconnect (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:387:8)
+    at ClientDuplexStream.<anonymous> (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:358:10)
+    at emitOne (events.js:116:13)
+    at ClientDuplexStream.emit (events.js:211:7)
+    at ClientDuplexStream._emitStatusIfDone (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/_grpc@1.10.1@grpc/src/client.js:271:12)
+    at ClientDuplexStream._readsDone (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/_grpc@1.10.1@grpc/src/client.js:236:8)
+    at readCallback (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/_grpc@1.10.1@grpc/src/client.js:296:12)
+[2021-01-31 20:38:17.505] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 20:38:17.507] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 20:38:17.509] [ERROR] Join-Channel - Failed to join all peers to channel. cause:Error: Problem setting up the event hub :Error: 14 UNAVAILABLE: Connect Failed
+[2021-01-31 20:40:13.353] [INFO] SampleWebApp - ****************** SERVER STARTED ************************
+[2021-01-31 20:40:13.356] [INFO] SampleWebApp - ***************  http://localhost:4000  ******************
+[2021-01-31 20:40:13.786] [INFO] SampleWebApp - app started!
+[2021-01-31 20:40:39.099] [INFO] Helper - User admin_cc_deke was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:40:39.741] [INFO] Helper - User admin_cc_dbiir was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:40:40.266] [INFO] Helper - User admin_cc_ruc was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:40:40.755] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:40:43.954] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:40:43.954] [INFO] Join-Channel - Calling peers in organization "Deke" to join the channel
+[2021-01-31 20:40:44.788] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8058 monitorchannel
+[2021-01-31 20:40:44.889] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8063 monitorchannel
+[2021-01-31 20:40:44.913] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8053 monitorchannel
+[2021-01-31 20:40:44.914] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:40:44.914] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:40:44.914] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:40:44.931] [INFO] Join-Channel - Successfully joined peers in organization Deke to the channel:monitorchannel
+[2021-01-31 20:40:47.960] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:40:47.960] [INFO] Join-Channel - Calling peers in organization "Dbiir" to join the channel
+[2021-01-31 20:40:48.559] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:9058 monitorchannel
+[2021-01-31 20:40:48.740] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:9053 monitorchannel
+[2021-01-31 20:40:48.766] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:9063 monitorchannel
+[2021-01-31 20:40:48.767] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:40:48.767] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:40:48.767] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:40:48.777] [INFO] Join-Channel - Successfully joined peers in organization Dbiir to the channel:monitorchannel
+[2021-01-31 20:40:51.806] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:40:51.806] [INFO] Join-Channel - Calling peers in organization "Ruc" to join the channel
+[2021-01-31 20:40:53.249] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6058 monitorchannel
+[2021-01-31 20:40:53.282] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6053 monitorchannel
+[2021-01-31 20:40:53.319] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6063 monitorchannel
+[2021-01-31 20:40:53.320] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:40:53.321] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:40:53.321] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:40:53.329] [INFO] Join-Channel - Successfully joined peers in organization Ruc to the channel:monitorchannel
+[2021-01-31 20:44:31.278] [INFO] SampleWebApp - ****************** SERVER STARTED ************************
+[2021-01-31 20:44:31.281] [INFO] SampleWebApp - ***************  http://localhost:4000  ******************
+[2021-01-31 20:44:31.685] [INFO] SampleWebApp - app started!
+[2021-01-31 20:45:07.300] [INFO] Helper - User admin_cc_deke was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:45:07.959] [INFO] Helper - User admin_cc_dbiir was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:45:08.514] [INFO] Helper - User admin_cc_ruc was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:45:09.024] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:45:12.224] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:45:12.225] [INFO] Join-Channel - Calling peers in organization "Deke" to join the channel
+[2021-01-31 20:45:13.057] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8058 monitorchannel
+[2021-01-31 20:45:13.075] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8053 monitorchannel
+[2021-01-31 20:45:13.116] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8063 monitorchannel
+[2021-01-31 20:45:13.118] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:45:13.118] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:45:13.118] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:45:13.132] [INFO] Join-Channel - Successfully joined peers in organization Deke to the channel:monitorchannel
+[2021-01-31 20:45:16.155] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:45:16.156] [INFO] Join-Channel - Calling peers in organization "Dbiir" to join the channel
+[2021-01-31 20:45:17.208] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:9053 monitorchannel
+[2021-01-31 20:45:17.261] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:9058 monitorchannel
+[2021-01-31 20:45:17.308] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:9063 monitorchannel
+[2021-01-31 20:45:17.315] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:45:17.315] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:45:17.315] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:45:17.326] [INFO] Join-Channel - Successfully joined peers in organization Dbiir to the channel:monitorchannel
+[2021-01-31 20:45:20.347] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:45:20.347] [INFO] Join-Channel - Calling peers in organization "Ruc" to join the channel
+[2021-01-31 20:45:21.094] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6063 monitorchannel
+[2021-01-31 20:45:21.181] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6053 monitorchannel
+[2021-01-31 20:45:21.278] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6058 monitorchannel
+[2021-01-31 20:45:21.279] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:45:21.279] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:45:21.279] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 20:45:21.287] [INFO] Join-Channel - Successfully joined peers in organization Ruc to the channel:monitorchannel
+[2021-01-31 20:45:47.103] [INFO] Helper - User admin_cc_gfe was not enrolled, so we will need an admin user object to register
+[2021-01-31 20:45:47.655] [INFO] Helper - Successfully loaded member from persistence
+[2021-01-31 20:45:47.699] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:45:50.893] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:45:50.893] [INFO] Join-Channel - Calling peers in organization "Gfe" to join the channel
+[2021-01-31 20:45:51.756] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7053 registerchannel
+[2021-01-31 20:45:51.814] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7058 registerchannel
+[2021-01-31 20:45:51.824] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7063 registerchannel
+[2021-01-31 20:45:51.825] [INFO] Join-Channel - Successfully joined peer to the channel registerchannel
+[2021-01-31 20:45:51.825] [INFO] Join-Channel - Successfully joined peer to the channel registerchannel
+[2021-01-31 20:45:51.825] [INFO] Join-Channel - Successfully joined peer to the channel registerchannel
+[2021-01-31 20:45:51.836] [INFO] Join-Channel - Successfully joined peers in organization Gfe to the channel:registerchannel
+[2021-01-31 20:45:54.872] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 20:45:54.872] [INFO] Join-Channel - Calling peers in organization "Deke" to join the channel
+[2021-01-31 20:45:55.588] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8053 registerchannel
+[2021-01-31 20:46:00.314] [INFO] Helper - Successfully loaded member from persistence
+[2021-01-31 20:46:00.367] [INFO] Helper - Successfully loaded member from persistence
+[2021-01-31 20:46:03.417] [INFO] Install-Chaincode - Calling peers in organization "Gfe" to join the channel
+[2021-01-31 20:46:03.595] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 20:46:03.595] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 20:46:03.595] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 20:46:03.595] [INFO] Install-Chaincode - Successfully sent install Proposal and received ProposalResponse
+[2021-01-31 20:46:03.595] [INFO] Install-Chaincode - Successfully install chaincode
+[2021-01-31 20:46:06.616] [INFO] Install-Chaincode - Calling peers in organization "Deke" to join the channel
+[2021-01-31 20:46:06.729] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 20:46:06.729] [INFO] Install-Chaincode - Successfully sent install Proposal and received ProposalResponse
+[2021-01-31 20:46:06.729] [INFO] Install-Chaincode - Successfully install chaincode
+[2021-01-31 20:46:30.626] [INFO] Instantiate-Chaincode - instantiate proposal was good
+[2021-01-31 20:46:30.627] [INFO] Instantiate-Chaincode - Successfully sent Proposal and received ProposalResponse: Status - 200, message - "OK", metadata - "
+nacosv0escc"vscc*I 
+
+DbiirMSP	
+DekeMSP
+
+GfeMSP
+
+RucMSP2D
+ �A���8�
+����VX	�.]?ܾt� i��C�,������*���@Rp��Hp��xR���: ੬�w��B��J��S��zX"����Ƽ�$BQ 
+DbiirMSP
+DekeMSP
+
+GfeMSP
+
+RucMSP", endorsement signature: 0E! ��m�ğg�f������u��;	�i��I�� v��BjY�N[���8��mZ9��$�����"��
+[2021-01-31 20:46:33.091] [INFO] Instantiate-Chaincode - The chaincode instantiate transaction has been committed on peer localhost:7051
+[2021-01-31 20:46:33.091] [INFO] Instantiate-Chaincode - Transaction 1575d01f990d6faf0c18eb0808ceba88a1c2ca463ec99814bb20bfced7f02e1c has status of VALID in blocl 1
+[2021-01-31 20:46:33.091] [INFO] Instantiate-Chaincode - The chaincode instantiate transaction was valid.
+[2021-01-31 20:46:33.092] [INFO] Instantiate-Chaincode - Successfully sent transaction to the orderer.
+[2021-01-31 20:46:33.092] [INFO] Instantiate-Chaincode - Successfully instantiate chaingcode in organization Gfe to the channel 'registerchannel'
+[2021-01-31 20:46:33.104] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8053 registerchannel
+[2021-01-31 20:46:54.919] [ERROR] Join-Channel - REQUEST_TIMEOUT:localhost:8058
+[2021-01-31 20:46:54.920] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 20:46:54.923] [ERROR] Join-Channel - Error: Problem setting up the event hub :Error: EventHub has been shutdown
+    at eh.registerBlockEvent (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/app/join-channel.js:85:13)
+    at closer (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:441:5)
+    at EventHub._closeAllCallbacks (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:446:3)
+    at EventHub._disconnect (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:387:8)
+    at EventHub.disconnect (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:376:8)
+    at Timeout.setTimeout (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/app/join-channel.js:60:9)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)
+[2021-01-31 20:46:54.923] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 20:46:54.930] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 20:46:54.935] [ERROR] Join-Channel - Failed to join all peers to channel. cause:Error: Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 20:47:11.334] [INFO] Helper - Successfully loaded member from persistence
+[2021-01-31 20:47:11.398] [INFO] Helper - Successfully loaded member from persistence
+[2021-01-31 20:47:11.460] [INFO] Helper - Successfully loaded member from persistence
+[2021-01-31 20:47:11.503] [INFO] Install-Chaincode - Calling peers in organization "Deke" to join the channel
+[2021-01-31 20:47:11.665] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 20:47:11.665] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 20:47:11.665] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 20:47:11.666] [INFO] Install-Chaincode - Successfully sent install Proposal and received ProposalResponse
+[2021-01-31 20:47:11.666] [INFO] Install-Chaincode - Successfully install chaincode
+[2021-01-31 20:47:11.678] [INFO] Install-Chaincode - Calling peers in organization "Dbiir" to join the channel
+[2021-01-31 20:47:11.886] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 20:47:11.886] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 20:47:11.886] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 20:47:11.886] [INFO] Install-Chaincode - Successfully sent install Proposal and received ProposalResponse
+[2021-01-31 20:47:11.886] [INFO] Install-Chaincode - Successfully install chaincode
+[2021-01-31 20:47:11.898] [INFO] Install-Chaincode - Calling peers in organization "Ruc" to join the channel
+[2021-01-31 20:47:12.259] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 20:47:12.259] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 20:47:12.260] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 20:47:12.260] [INFO] Install-Chaincode - Successfully sent install Proposal and received ProposalResponse
+[2021-01-31 20:47:12.260] [INFO] Install-Chaincode - Successfully install chaincode
+[2021-01-31 20:47:31.218] [INFO] Instantiate-Chaincode - instantiate proposal was good
+[2021-01-31 20:47:31.219] [INFO] Instantiate-Chaincode - Successfully sent Proposal and received ProposalResponse: Status - 200, message - "OK", metadata - "
+monitorv0escc"vscc*I 
+
+DbiirMSP	
+DekeMSP
+
+GfeMSP
+
+RucMSP2D
+ OSl����,u�s��!c+��B7��Z�<�J .z�A6yTcNk��ō�U��z��L�7+��: �N�i�a½�[�sðv��K!��
+/��XɻBQ 
+DbiirMSP
+DekeMSP
+
+GfeMSP
+
+RucMSP", endorsement signature: 0D 	`� �m��1��A�^UP�ӿ��v*(i3�L >,&���' ��H���<C��!G�G.V�s(q
+[2021-01-31 20:47:31.277] [INFO] Instantiate-Chaincode - Successfully sent transaction to the orderer.
+[2021-01-31 20:47:31.277] [INFO] Instantiate-Chaincode - Successfully instantiate chaingcode in organization Deke to the channel 'monitorchannel'
+[2021-01-31 21:56:19.309] [INFO] SampleWebApp - ****************** SERVER STARTED ************************
+[2021-01-31 21:56:19.312] [INFO] SampleWebApp - ***************  http://localhost:4000  ******************
+[2021-01-31 21:56:19.814] [INFO] SampleWebApp - app started!
+[2021-01-31 21:57:14.830] [INFO] Helper - User admin_cc_deke was not enrolled, so we will need an admin user object to register
+[2021-01-31 21:57:15.506] [INFO] Helper - User admin_cc_dbiir was not enrolled, so we will need an admin user object to register
+[2021-01-31 21:57:16.075] [INFO] Helper - User admin_cc_ruc was not enrolled, so we will need an admin user object to register
+[2021-01-31 21:57:16.621] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 21:57:19.890] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 21:57:19.891] [INFO] Join-Channel - Calling peers in organization "Deke" to join the channel
+[2021-01-31 21:57:20.715] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8053 monitorchannel
+[2021-01-31 21:57:20.790] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8058 monitorchannel
+[2021-01-31 21:57:20.902] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8063 monitorchannel
+[2021-01-31 21:57:20.903] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 21:57:20.903] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 21:57:20.903] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 21:57:20.916] [INFO] Join-Channel - Successfully joined peers in organization Deke to the channel:monitorchannel
+[2021-01-31 21:57:23.936] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 21:57:23.936] [INFO] Join-Channel - Calling peers in organization "Dbiir" to join the channel
+[2021-01-31 21:57:24.774] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:9053 monitorchannel
+[2021-01-31 21:57:24.824] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:9063 monitorchannel
+[2021-01-31 21:57:24.901] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:9058 monitorchannel
+[2021-01-31 21:57:24.901] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 21:57:24.901] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 21:57:24.901] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 21:57:24.912] [INFO] Join-Channel - Successfully joined peers in organization Dbiir to the channel:monitorchannel
+[2021-01-31 21:57:27.928] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 21:57:27.928] [INFO] Join-Channel - Calling peers in organization "Ruc" to join the channel
+[2021-01-31 21:57:28.756] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6053 monitorchannel
+[2021-01-31 21:57:28.787] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6063 monitorchannel
+[2021-01-31 21:57:28.819] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6058 monitorchannel
+[2021-01-31 21:57:28.820] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 21:57:28.821] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 21:57:28.821] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 21:57:28.829] [INFO] Join-Channel - Successfully joined peers in organization Ruc to the channel:monitorchannel
+[2021-01-31 21:57:35.578] [INFO] Helper - User admin_cc_gfe was not enrolled, so we will need an admin user object to register
+[2021-01-31 21:57:36.143] [INFO] Helper - Successfully loaded member from persistence
+[2021-01-31 21:57:36.187] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 21:57:39.443] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 21:57:39.444] [INFO] Join-Channel - Calling peers in organization "Gfe" to join the channel
+[2021-01-31 21:57:40.162] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7053 registerchannel
+[2021-01-31 21:57:40.234] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7058 registerchannel
+[2021-01-31 21:57:40.304] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7063 registerchannel
+[2021-01-31 21:57:40.307] [INFO] Join-Channel - Successfully joined peer to the channel registerchannel
+[2021-01-31 21:57:40.307] [INFO] Join-Channel - Successfully joined peer to the channel registerchannel
+[2021-01-31 21:57:40.307] [INFO] Join-Channel - Successfully joined peer to the channel registerchannel
+[2021-01-31 21:57:40.317] [INFO] Join-Channel - Successfully joined peers in organization Gfe to the channel:registerchannel
+[2021-01-31 21:57:43.339] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 21:57:43.339] [INFO] Join-Channel - Calling peers in organization "Deke" to join the channel
+[2021-01-31 21:57:43.797] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8053 registerchannel
+[2021-01-31 21:57:53.888] [INFO] Helper - Successfully loaded member from persistence
+[2021-01-31 21:57:53.945] [INFO] Helper - Successfully loaded member from persistence
+[2021-01-31 21:57:56.997] [INFO] Install-Chaincode - Calling peers in organization "Gfe" to join the channel
+[2021-01-31 21:57:57.180] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 21:57:57.180] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 21:57:57.180] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 21:57:57.180] [INFO] Install-Chaincode - Successfully sent install Proposal and received ProposalResponse
+[2021-01-31 21:57:57.180] [INFO] Install-Chaincode - Successfully install chaincode
+[2021-01-31 21:58:00.195] [INFO] Install-Chaincode - Calling peers in organization "Deke" to join the channel
+[2021-01-31 21:58:00.320] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 21:58:00.321] [INFO] Install-Chaincode - Successfully sent install Proposal and received ProposalResponse
+[2021-01-31 21:58:00.321] [INFO] Install-Chaincode - Successfully install chaincode
+[2021-01-31 21:58:22.894] [INFO] Instantiate-Chaincode - instantiate proposal was good
+[2021-01-31 21:58:22.894] [INFO] Instantiate-Chaincode - Successfully sent Proposal and received ProposalResponse: Status - 200, message - "OK", metadata - "
+nacosv0escc"vscc*I 
+
+DbiirMSP	
+DekeMSP
+
+GfeMSP
+
+RucMSP2D
+ �A���8�
+����VX	�.]?ܾt� i��C�,������*���@Rp��Hp��xR���: ੬�w��B��J��S��zX"����Ƽ�$BQ 
+DbiirMSP
+DekeMSP
+
+GfeMSP
+
+RucMSP", endorsement signature: 0E! ��Rk����Hp\��]j���>�w��'�c [/\����7Gu�Έ\�`Ų�	���Kv�QZ
+[2021-01-31 21:58:25.348] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8053 registerchannel
+[2021-01-31 21:58:25.390] [INFO] Instantiate-Chaincode - The chaincode instantiate transaction has been committed on peer localhost:7051
+[2021-01-31 21:58:25.390] [INFO] Instantiate-Chaincode - Transaction 7b9557a0fefb3f6aa66330c065980de86851a87426d4fbc9e6d03f6fdf2c7a7e has status of VALID in blocl 1
+[2021-01-31 21:58:25.390] [INFO] Instantiate-Chaincode - The chaincode instantiate transaction was valid.
+[2021-01-31 21:58:25.390] [INFO] Instantiate-Chaincode - Successfully sent transaction to the orderer.
+[2021-01-31 21:58:25.391] [INFO] Instantiate-Chaincode - Successfully instantiate chaingcode in organization Gfe to the channel 'registerchannel'
+[2021-01-31 21:58:34.986] [INFO] Helper - Successfully loaded member from persistence
+[2021-01-31 21:58:35.044] [INFO] Helper - Successfully loaded member from persistence
+[2021-01-31 21:58:35.109] [INFO] Helper - Successfully loaded member from persistence
+[2021-01-31 21:58:35.151] [INFO] Install-Chaincode - Calling peers in organization "Deke" to join the channel
+[2021-01-31 21:58:35.710] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 21:58:35.710] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 21:58:35.710] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 21:58:35.710] [INFO] Install-Chaincode - Successfully sent install Proposal and received ProposalResponse
+[2021-01-31 21:58:35.710] [INFO] Install-Chaincode - Successfully install chaincode
+[2021-01-31 21:58:35.728] [INFO] Install-Chaincode - Calling peers in organization "Dbiir" to join the channel
+[2021-01-31 21:58:35.963] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 21:58:35.963] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 21:58:35.963] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 21:58:35.963] [INFO] Install-Chaincode - Successfully sent install Proposal and received ProposalResponse
+[2021-01-31 21:58:35.963] [INFO] Install-Chaincode - Successfully install chaincode
+[2021-01-31 21:58:35.975] [INFO] Install-Chaincode - Calling peers in organization "Ruc" to join the channel
+[2021-01-31 21:58:36.134] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 21:58:36.134] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 21:58:36.134] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 21:58:36.134] [INFO] Install-Chaincode - Successfully sent install Proposal and received ProposalResponse
+[2021-01-31 21:58:36.134] [INFO] Install-Chaincode - Successfully install chaincode
+[2021-01-31 21:58:43.389] [ERROR] Join-Channel - REQUEST_TIMEOUT:localhost:8058
+[2021-01-31 21:58:43.389] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 21:58:43.394] [ERROR] Join-Channel - Error: Problem setting up the event hub :Error: EventHub has been shutdown
+    at eh.registerBlockEvent (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/app/join-channel.js:85:13)
+    at closer (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:441:5)
+    at EventHub._closeAllCallbacks (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:446:3)
+    at EventHub._disconnect (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:387:8)
+    at EventHub.disconnect (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:376:8)
+    at Timeout.setTimeout (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/app/join-channel.js:60:9)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)
+[2021-01-31 21:58:43.395] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 21:58:43.399] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 21:58:43.404] [ERROR] Join-Channel - Failed to join all peers to channel. cause:Error: Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 21:58:54.549] [INFO] Instantiate-Chaincode - instantiate proposal was good
+[2021-01-31 21:58:54.549] [INFO] Instantiate-Chaincode - Successfully sent Proposal and received ProposalResponse: Status - 200, message - "OK", metadata - "
+monitorv0escc"vscc*I 
+
+DbiirMSP	
+DekeMSP
+
+GfeMSP
+
+RucMSP2D
+ OSl����,u�s��!c+��B7��Z�<�J .z�A6yTcNk��ō�U��z��L�7+��: �N�i�a½�[�sðv��K!��
+/��XɻBQ 
+DbiirMSP
+DekeMSP
+
+GfeMSP
+
+RucMSP", endorsement signature: 0D �뵑r���G�Jވ���W:_���M��N�jR �DY?oߣ����(���Dn��hk��4�W
+[2021-01-31 21:58:54.599] [INFO] Instantiate-Chaincode - Successfully sent transaction to the orderer.
+[2021-01-31 21:58:54.599] [INFO] Instantiate-Chaincode - Successfully instantiate chaingcode in organization Deke to the channel 'monitorchannel'
+[2021-01-31 23:30:17.131] [INFO] SampleWebApp - ****************** SERVER STARTED ************************
+[2021-01-31 23:30:17.134] [INFO] SampleWebApp - ***************  http://localhost:4000  ******************
+[2021-01-31 23:30:18.398] [INFO] SampleWebApp - app started!
+[2021-01-31 23:47:16.355] [INFO] Helper - User admin_cc_gfe was not enrolled, so we will need an admin user object to register
+[2021-01-31 23:47:17.137] [INFO] Helper - User admin_cc_deke was not enrolled, so we will need an admin user object to register
+[2021-01-31 23:47:17.857] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 23:47:21.242] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 23:47:21.243] [INFO] Join-Channel - Calling peers in organization "Gfe" to join the channel
+[2021-01-31 23:47:22.257] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7058 registerchannel
+[2021-01-31 23:47:22.290] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7063 registerchannel
+[2021-01-31 23:47:22.334] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7053 registerchannel
+[2021-01-31 23:47:22.336] [INFO] Join-Channel - Successfully joined peer to the channel registerchannel
+[2021-01-31 23:47:22.338] [INFO] Join-Channel - Successfully joined peer to the channel registerchannel
+[2021-01-31 23:47:22.339] [INFO] Join-Channel - Successfully joined peer to the channel registerchannel
+[2021-01-31 23:47:22.355] [INFO] Join-Channel - Successfully joined peers in organization Gfe to the channel:registerchannel
+[2021-01-31 23:47:25.376] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 23:47:25.376] [INFO] Join-Channel - Calling peers in organization "Deke" to join the channel
+[2021-01-31 23:47:26.029] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8053 registerchannel
+[2021-01-31 23:47:33.330] [INFO] Helper - Successfully loaded member from persistence
+[2021-01-31 23:47:33.402] [INFO] Helper - User admin_cc_dbiir was not enrolled, so we will need an admin user object to register
+[2021-01-31 23:47:34.225] [INFO] Helper - User admin_cc_ruc was not enrolled, so we will need an admin user object to register
+[2021-01-31 23:47:34.822] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 23:47:38.093] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 23:47:38.094] [INFO] Join-Channel - Calling peers in organization "Deke" to join the channel
+[2021-01-31 23:47:39.451] [ERROR] Join-Channel - Unknown channel block event received from localhost:8053
+[2021-01-31 23:47:39.455] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8053 monitorchannel
+[2021-01-31 23:47:39.716] [ERROR] Join-Channel - Unknown channel block event received from localhost:8058
+[2021-01-31 23:47:39.716] [ERROR] Join-Channel - Error: Unknown channel block event received from localhost:8058
+    at eh.registerBlockEvent (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/app/join-channel.js:78:15)
+    at /Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:761:4
+    at Array.forEach (<anonymous>)
+    at EventHub._processBlockOnEvents (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:759:36)
+    at ClientDuplexStream.<anonymous> (/Users/lihaoran/Desktop/project/SCASverify/fabric-nodejs/node_modules/fabric-client/lib/EventHub.js:312:10)
+    at emitOne (events.js:116:13)
+    at ClientDuplexStream.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at ClientDuplexStream.Readable.push (_stream_readable.js:208:10)
+[2021-01-31 23:47:39.717] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 23:47:39.720] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 23:47:39.725] [ERROR] Join-Channel - Problem setting up the event hub :Error: EventHub has been shutdown
+[2021-01-31 23:47:39.728] [ERROR] Join-Channel - Failed to join all peers to channel. cause:Error: Unknown channel block event received from localhost:8058
+[2021-01-31 23:47:39.734] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8058 monitorchannel
+[2021-01-31 23:47:39.922] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:8063 monitorchannel
+[2021-01-31 23:47:39.923] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 23:47:39.923] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 23:47:39.923] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 23:47:39.933] [INFO] Join-Channel - Successfully joined peers in organization Deke to the channel:monitorchannel
+[2021-01-31 23:47:42.956] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 23:47:42.957] [INFO] Join-Channel - Calling peers in organization "Dbiir" to join the channel
+[2021-01-31 23:47:43.952] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:9063 monitorchannel
+[2021-01-31 23:47:44.016] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:9058 monitorchannel
+[2021-01-31 23:47:44.031] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:9053 monitorchannel
+[2021-01-31 23:47:44.032] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 23:47:44.032] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 23:47:44.032] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 23:47:44.046] [INFO] Join-Channel - Successfully joined peers in organization Dbiir to the channel:monitorchannel
+[2021-01-31 23:47:47.070] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2021-01-31 23:47:47.070] [INFO] Join-Channel - Calling peers in organization "Ruc" to join the channel
+[2021-01-31 23:47:48.041] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6058 monitorchannel
+[2021-01-31 23:47:48.097] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6063 monitorchannel
+[2021-01-31 23:47:48.123] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:6053 monitorchannel
+[2021-01-31 23:47:48.124] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 23:47:48.124] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 23:47:48.124] [INFO] Join-Channel - Successfully joined peer to the channel monitorchannel
+[2021-01-31 23:47:48.134] [INFO] Join-Channel - Successfully joined peers in organization Ruc to the channel:monitorchannel
+[2021-01-31 23:48:13.870] [INFO] Helper - Successfully loaded member from persistence
+[2021-01-31 23:48:13.940] [INFO] Helper - Successfully loaded member from persistence
+[2021-01-31 23:48:16.993] [INFO] Install-Chaincode - Calling peers in organization "Gfe" to join the channel
+[2021-01-31 23:48:17.203] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 23:48:17.203] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 23:48:17.203] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 23:48:17.203] [INFO] Install-Chaincode - Successfully sent install Proposal and received ProposalResponse
+[2021-01-31 23:48:17.203] [INFO] Install-Chaincode - Successfully install chaincode
+[2021-01-31 23:48:20.220] [INFO] Install-Chaincode - Calling peers in organization "Deke" to join the channel
+[2021-01-31 23:48:20.366] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 23:48:20.366] [INFO] Install-Chaincode - Successfully sent install Proposal and received ProposalResponse
+[2021-01-31 23:48:20.366] [INFO] Install-Chaincode - Successfully install chaincode
+[2021-01-31 23:48:42.559] [INFO] Instantiate-Chaincode - instantiate proposal was good
+[2021-01-31 23:48:42.559] [INFO] Instantiate-Chaincode - Successfully sent Proposal and received ProposalResponse: Status - 200, message - "OK", metadata - "
+nacosv0escc"vscc*I 
+
+DbiirMSP	
+DekeMSP
+
+GfeMSP
+
+RucMSP2D
+ �A���8�
+����VX	�.]?ܾt� i��C�,������*���@Rp��Hp��xR���: ੬�w��B��J��S��zX"����Ƽ�$BQ 
+DbiirMSP
+DekeMSP
+
+GfeMSP
+
+RucMSP", endorsement signature: 0D ]u�8�[l�~\@Xsו���@��3"���峆Io% &�K�{��[?Z���O�tE�����bk\��#
+[2021-01-31 23:48:45.254] [INFO] Instantiate-Chaincode - The chaincode instantiate transaction has been committed on peer localhost:7051
+[2021-01-31 23:48:45.254] [INFO] Instantiate-Chaincode - Transaction ae75e017e935453dbdd8726ccbfb691a4972e86ce56bd42004877832bac7c440 has status of VALID in blocl 1
+[2021-01-31 23:48:45.254] [INFO] Instantiate-Chaincode - The chaincode instantiate transaction was valid.
+[2021-01-31 23:48:45.255] [INFO] Instantiate-Chaincode - Successfully sent transaction to the orderer.
+[2021-01-31 23:48:45.255] [INFO] Instantiate-Chaincode - Successfully instantiate chaingcode in organization Gfe to the channel 'registerchannel'
+[2021-01-31 23:48:58.784] [INFO] Helper - Successfully loaded member from persistence
+[2021-01-31 23:48:58.843] [INFO] Helper - Successfully loaded member from persistence
+[2021-01-31 23:48:58.909] [INFO] Helper - Successfully loaded member from persistence
+[2021-01-31 23:48:58.951] [INFO] Install-Chaincode - Calling peers in organization "Deke" to join the channel
+[2021-01-31 23:48:59.141] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 23:48:59.141] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 23:48:59.141] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 23:48:59.141] [INFO] Install-Chaincode - Successfully sent install Proposal and received ProposalResponse
+[2021-01-31 23:48:59.141] [INFO] Install-Chaincode - Successfully install chaincode
+[2021-01-31 23:48:59.156] [INFO] Install-Chaincode - Calling peers in organization "Dbiir" to join the channel
+[2021-01-31 23:48:59.354] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 23:48:59.354] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 23:48:59.354] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 23:48:59.354] [INFO] Install-Chaincode - Successfully sent install Proposal and received ProposalResponse
+[2021-01-31 23:48:59.354] [INFO] Install-Chaincode - Successfully install chaincode
+[2021-01-31 23:48:59.367] [INFO] Install-Chaincode - Calling peers in organization "Ruc" to join the channel
+[2021-01-31 23:48:59.552] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 23:48:59.552] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 23:48:59.552] [INFO] Install-Chaincode - install proposal was good
+[2021-01-31 23:48:59.552] [INFO] Install-Chaincode - Successfully sent install Proposal and received ProposalResponse
+[2021-01-31 23:48:59.552] [INFO] Install-Chaincode - Successfully install chaincode
+[2021-01-31 23:49:18.025] [INFO] Instantiate-Chaincode - instantiate proposal was good
+[2021-01-31 23:49:18.025] [INFO] Instantiate-Chaincode - Successfully sent Proposal and received ProposalResponse: Status - 200, message - "OK", metadata - "
+monitorv0escc"vscc*I 
+
+DbiirMSP	
+DekeMSP
+
+GfeMSP
+
+RucMSP2D
+ OSl����,u�s��!c+��B7��Z�<�J .z�A6yTcNk��ō�U��z��L�7+��: �N�i�a½�[�sðv��K!��
+/��XɻBQ 
+DbiirMSP
+DekeMSP
+
+GfeMSP
+
+RucMSP", endorsement signature: 0E! �isB��S$��oF��������J�&�{�u��` �j)�XH*)���ﷻa^x6�Ϋ�KUh��/
+[2021-01-31 23:49:18.092] [INFO] Instantiate-Chaincode - Successfully sent transaction to the orderer.
+[2021-01-31 23:49:18.092] [INFO] Instantiate-Chaincode - Successfully instantiate chaingcode in organization Deke to the channel 'monitorchannel'

@@ -1,0 +1,24 @@
+[2020-11-18 16:51:47.180] [INFO] SampleWebApp - ****************** SERVER STARTED ************************
+[2020-11-18 16:51:47.183] [INFO] SampleWebApp - ***************  http://localhost:4000  ******************
+[2020-11-18 16:51:47.448] [INFO] SampleWebApp - app started!
+[2020-11-18 16:52:10.857] [INFO] Helper - User admin_cc_gfe was not enrolled, so we will need an admin user object to register
+[2020-11-18 16:52:11.416] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2020-11-18 16:52:14.580] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2020-11-18 16:52:14.581] [INFO] Join-Channel - Calling peers in organization "Gfe" to join the channel
+[2020-11-18 16:52:15.149] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7058 softwarechannel
+[2020-11-18 16:52:15.158] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7053 softwarechannel
+[2020-11-18 16:52:15.159] [INFO] Join-Channel - Successfully joined peer to the channel softwarechannel
+[2020-11-18 16:52:15.159] [INFO] Join-Channel - Successfully joined peer to the channel softwarechannel
+[2020-11-18 16:52:15.165] [INFO] Join-Channel - Successfully joined peers in organization Gfe to the channel:softwarechannel
+[2020-11-18 16:59:12.681] [INFO] SampleWebApp - ****************** SERVER STARTED ************************
+[2020-11-18 16:59:12.683] [INFO] SampleWebApp - ***************  http://localhost:4000  ******************
+[2020-11-18 16:59:12.940] [INFO] SampleWebApp - app started!
+[2020-11-18 16:59:34.280] [INFO] Helper - User admin_cc_gfe was not enrolled, so we will need an admin user object to register
+[2020-11-18 16:59:34.827] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[2020-11-18 16:59:38.028] [INFO] SampleWebApp - <<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[2020-11-18 16:59:38.029] [INFO] Join-Channel - Calling peers in organization "Gfe" to join the channel
+[2020-11-18 16:59:38.667] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7053 softwarechannel
+[2020-11-18 16:59:38.721] [INFO] Join-Channel - EventHub % has reported a block update for channel localhost:7058 softwarechannel
+[2020-11-18 16:59:38.722] [INFO] Join-Channel - Successfully joined peer to the channel softwarechannel
+[2020-11-18 16:59:38.722] [INFO] Join-Channel - Successfully joined peer to the channel softwarechannel
+[2020-11-18 16:59:38.728] [INFO] Join-Channel - Successfully joined peers in organization Gfe to the channel:softwarechannel

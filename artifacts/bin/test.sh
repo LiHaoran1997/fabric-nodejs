@@ -1,0 +1,1 @@
+./bin/configuration -profile TwoOrgsOrdererGenesis -outputBlock ./../channel/genesis.block
